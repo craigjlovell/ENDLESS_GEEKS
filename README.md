@@ -1,16 +1,22 @@
 # PROJECT NAME
 
 ## About the Game
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+PONG – New Dimension is a modern remake of the classic duel game.  A player must manipulate their paddle to bounce a ball past the other sides paddle to score points. 
+
+The primary difference from regular pong is when a point is scored the camera will rotate towards the player who scored until eventually the gameplay switches to 3D gameplay. 
+
+PONG – New Dimensions also includes collectable powerups and destructible objects. 
 
 ### Contributors:
 Contributors to the project are strictly limated to AIE Students as part of their group work project.
 
 Members (example):
- - John Doe: designer
- - John Smith: programmer
- - Sandra Dee: artist
-
+- Craig Lovell: Programmer
+- Rachel Espinosa: Artist
+- Daniel Leonards: Artist
+- Sasha Smirnova: Artist
+- Joel Cefai: Designer
+- Jasper Eyers: Designer
 
 ## Build Steps:
 The project can currently be built for both windows and webgl in the following ways:
