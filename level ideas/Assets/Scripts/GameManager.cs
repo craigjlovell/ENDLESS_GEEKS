@@ -12,4 +12,7 @@ public class GameManager : MonoBehaviour
     //paddle vars
     public float PaddleXSpeed;
     public float PaddleYSpeed;
+
+    //ball vars
+    public float acceleration;
 }

@@ -12,10 +12,4 @@ public class Ball : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.AddForce(new Vector3(0, 0, 4), ForceMode.Impulse);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
