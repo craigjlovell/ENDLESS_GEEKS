@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PaddleController : MonoBehaviour
 {
-    private bool PLAY = true;
-    [SerializeField] private GameObject Player;
-    [SerializeField] private bool IsPlayerOne;
+    public bool isPlayer1;
+    public float speed;
+    public Rigidbody2D rb;
 
+    private float movment;
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +19,14 @@ public class PaddleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PLAY)
+        if(isPlayer1)
         {
-            if (IsPlayerOne)
-            {
-
-            }
+            movment = Input.GetAxisRaw("Vertical");
         }
+        else
+        {
+            movment = Input.GetAxisRaw("Vertical2");
+        }
+        rb.velocity = new Vector2(rb.velocity.x, movment * speed);
     }
 }
