@@ -123,6 +123,54 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &202321982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 202321984}
+  - component: {fileID: 202321983}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &202321983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202321982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc770cfa9107c264d94d442fd90cd3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PLAY: 1
+  is3d: 0
+  isLeft: 0
+  PaddleXSpeed: 5
+  PaddleYSpeed: 5
+--- !u!4 &202321984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202321982}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.4273365, y: -0.47044784, z: -1.1253672}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!850595691 &424116314
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -4500,7 +4548,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15704
+  m_Name: pb_Mesh15734
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4693,9 +4741,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer1: 0
-  speed: 5
   rb: {fileID: 820878436}
-  is3d: 0
+  GM: {fileID: 202321983}
 --- !u!33 &820878432
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -4989,7 +5036,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!65 &820878437
 BoxCollider:
@@ -9165,7 +9212,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15782
+  m_Name: pb_Mesh15848
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9866,9 +9913,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer1: 1
-  speed: 5
   rb: {fileID: 1945554199}
-  is3d: 0
+  GM: {fileID: 202321983}
 --- !u!33 &1945554195
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -10162,7 +10208,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 1
 --- !u!65 &1945554200
 BoxCollider:

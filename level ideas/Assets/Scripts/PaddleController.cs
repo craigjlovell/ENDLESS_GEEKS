@@ -5,14 +5,12 @@ using UnityEngine;
 public class PaddleController : MonoBehaviour
 {
     public bool isPlayer1;
-    public float speed;
     public Rigidbody rb;
 
     private float movementY;
     private float movementX;
 
-    public bool is3d = false;
-    public bool isLeft = false;
+    public GameManager GM;
 
     // Start is called before the first frame update
     void Start()
@@ -33,23 +31,27 @@ public class PaddleController : MonoBehaviour
             movementY = Input.GetAxisRaw("Vertical2");
             movementX = Input.GetAxisRaw("Horizontal2");
         }
-        Move();
+        if (GM.PLAY)
+        {
+            Move();
+        }
+
     }
 
     private void Move()
     {
 
-        if (!is3d)
+        if (!GM.is3d)
         {
-            rb.velocity = new Vector3(rb.velocity.x, movementY * speed);
+            rb.velocity = new Vector3(rb.velocity.x, movementY * GM.PaddleYSpeed);
         }
-        else if (isLeft)
+        else if (GM.isLeft)
         {
-            rb.velocity = new Vector3(movementX * speed, movementY * speed);
+            rb.velocity = new Vector3(movementX * GM.PaddleXSpeed, movementY * GM.PaddleYSpeed);
         }
         else
         {
-            rb.velocity = new Vector3(movementX * -speed, movementY * speed);
+            rb.velocity = new Vector3(movementX * -GM.PaddleXSpeed, movementY * GM.PaddleYSpeed);
         }
     }
 }
