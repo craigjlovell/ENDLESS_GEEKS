@@ -12,6 +12,7 @@ public class PaddleController : MonoBehaviour
     private float movementX;
 
     public bool is3d = false;
+    public bool isLeft = false;
 
     // Start is called before the first frame update
     void Start()
@@ -37,10 +38,18 @@ public class PaddleController : MonoBehaviour
 
     private void Move()
     {
-        rb.velocity = new Vector3(rb.velocity.x, movementY * speed);
-        if (is3d)
+
+        if (!is3d)
         {
-            rb.velocity = new Vector3(rb.velocity.y, movementX * speed);
+            rb.velocity = new Vector3(rb.velocity.x, movementY * speed);
+        }
+        else if (isLeft)
+        {
+            rb.velocity = new Vector3(movementX * speed, movementY * speed);
+        }
+        else
+        {
+            rb.velocity = new Vector3(movementX * -speed, movementY * speed);
         }
     }
 }
