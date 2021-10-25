@@ -6,9 +6,12 @@ public class PaddleController : MonoBehaviour
 {
     public bool isPlayer1;
     public float speed;
-    public Rigidbody2D rb;
+    public Rigidbody rb;
 
-    private float movment;
+    private float movementY;
+    private float movementX;
+
+    public bool is3d = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,12 +24,23 @@ public class PaddleController : MonoBehaviour
     {
         if(isPlayer1)
         {
-            movment = Input.GetAxisRaw("Vertical");
+            movementY = Input.GetAxisRaw("Vertical");
+            movementX = Input.GetAxisRaw("Horizontal");
         }
         else
         {
-            movment = Input.GetAxisRaw("Vertical2");
+            movementY = Input.GetAxisRaw("Vertical2");
+            movementX = Input.GetAxisRaw("Horizontal2");
         }
-        rb.velocity = new Vector2(rb.velocity.x, movment * speed);
+        Move();
+    }
+
+    private void Move()
+    {
+        rb.velocity = new Vector3(rb.velocity.x, movementY * speed);
+        if (is3d)
+        {
+            rb.velocity = new Vector3(rb.velocity.y, movementX * speed);
+        }
     }
 }
