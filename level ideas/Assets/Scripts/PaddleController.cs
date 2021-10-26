@@ -35,7 +35,14 @@ public class PaddleController : MonoBehaviour
             inputSpeedX = Input.GetAxisRaw("Horizontal2");
             inputSpeedY = Input.GetAxisRaw("Vertical2");
         }
-        transform.position += new Vector3(inputSpeedX * -GM.PaddleXSpeed * Time.deltaTime, 0f, 0f);
+        if (GM.isLeft)
+        {
+            transform.position += new Vector3(inputSpeedX * GM.PaddleXSpeed * Time.deltaTime, 0f, 0f);
+        }
+        else
+        {
+            transform.position += new Vector3(inputSpeedX * -GM.PaddleXSpeed * Time.deltaTime, 0f, 0f);
+        }
         transform.position += new Vector3(0f, inputSpeedY * GM.PaddleXSpeed * Time.deltaTime, 0f);
     }
 
