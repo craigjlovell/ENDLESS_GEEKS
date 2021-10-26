@@ -46,7 +46,7 @@ public class BallBounce : MonoBehaviour
     private float minVelocity = 10f;
 
     private Vector3 lastFrameVelocity;
-    private Rigidbody rb;
+    [SerializeField] Rigidbody rb;
 
     private void OnEnable()
     {
