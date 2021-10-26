@@ -12,9 +12,4 @@ public class Ball : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.AddForce(new Vector3(4, 0, 4), ForceMode.Impulse);
     }
-
-    void ReturnToCenter()
-    {
-        transform.position = new Vector3(0, 0, 0);
-    }
 }
