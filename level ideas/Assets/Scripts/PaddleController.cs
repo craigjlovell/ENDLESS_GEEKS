@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ePlayer
+{
+    PLAYER1,
+    PLAYER2
+}
+
 public class PaddleController : MonoBehaviour
 {
-    public bool isPlayer1;
-    public Rigidbody rb;
-
-    private float movementY;
-    private float movementX;
-
+    public float speed = 5f;
+    public ePlayer player;
     public GameManager GM;
 
     // Start is called before the first frame update
@@ -21,37 +23,24 @@ public class PaddleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isPlayer1)
+        float inputSpeedX = 0f;
+        float inputSpeedY = 0f;
+        if(player == ePlayer.PLAYER1)
         {
-            movementY = Input.GetAxisRaw("Vertical");
-            movementX = Input.GetAxisRaw("Horizontal");
+            inputSpeedX = Input.GetAxisRaw("Horizontal");
+            inputSpeedY = Input.GetAxisRaw("Vertical");
         }
-        else
+        else if(player == ePlayer.PLAYER2)
         {
-            movementY = Input.GetAxisRaw("Vertical2");
-            movementX = Input.GetAxisRaw("Horizontal2");
+            inputSpeedX = Input.GetAxisRaw("Horizontal2");
+            inputSpeedY = Input.GetAxisRaw("Vertical2");
         }
-        if (GM.PLAY)
-        {
-            Move();
-        }
-
+        transform.position += new Vector3(inputSpeedX * -GM.PaddleXSpeed * Time.deltaTime, 0f, 0f);
+        transform.position += new Vector3(0f, inputSpeedY * GM.PaddleXSpeed * Time.deltaTime, 0f);
     }
 
     private void Move()
     {
 
-        if (!GM.is3d)
-        {
-            rb.velocity = new Vector3(rb.velocity.x, movementY * GM.PaddleYSpeed);
-        }
-        else if (GM.isLeft)
-        {
-            rb.velocity = new Vector3(movementX * GM.PaddleXSpeed, movementY * GM.PaddleYSpeed);
-        }
-        else
-        {
-            rb.velocity = new Vector3(movementX * -GM.PaddleXSpeed, movementY * GM.PaddleYSpeed);
-        }
     }
 }

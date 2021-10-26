@@ -15,7 +15,7 @@ public class BallBounce : MonoBehaviour
     {
         Debug.Log("HIT");
         if (other.gameObject.tag == "Ball")
-        {
+        {            
             Debug.Log("HIT");
             if (X)
             {
@@ -31,4 +31,19 @@ public class BallBounce : MonoBehaviour
             }
         }
     }
+    //void Start()
+    //{
+    //    rb = GetComponent<Rigidbody>();
+    //    // Increase max angular velocity or we won't see much spin.
+    //    rb.maxAngularVelocity = 1000;
+    //    StartCoroutine(ChangeRotation());
+    //}
+    //private IEnumerator ChangeRotation()
+    //{
+    //    while (true)
+    //    {
+    //        rb.AddTorque(new Vector3(10 * UnityEngine.Random.Range(0, 3f), UnityEngine.Random.Range(0, 3f), UnityEngine.Random.Range(0, 3f)), ForceMode.VelocityChange);
+    //        yield return new WaitForSeconds(1);
+    //    }
+    //}
 }
