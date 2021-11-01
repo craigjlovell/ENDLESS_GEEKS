@@ -8,7 +8,7 @@ public class Score : MonoBehaviour
     public int scorePlayer2;
     public GUIStyle style;
 
-    void onGUI()
+    void OnGUI()
     {
         float x = Screen.width / 2f;
         float y = 30f;
