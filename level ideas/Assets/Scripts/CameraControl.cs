@@ -8,7 +8,6 @@ public class CameraControl : MonoBehaviour
     private Camera cam;
     public int camPos;
     private Vector3 newPos;
-    [SerializeField] private bool scored;
     public float camSpeed;
     [SerializeField] float smooth;
     public Quaternion target;
@@ -66,13 +65,9 @@ public class CameraControl : MonoBehaviour
             newPos = new Vector3(0, 0, 20);
             target = Quaternion.Euler(0, -180, 0);
         }
-
-        if (scored)
-        {
             camObj.transform.position = Vector3.Lerp(camObj.transform.position, newPos, camSpeed);
 
             transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
-        }
     }
 }
 
