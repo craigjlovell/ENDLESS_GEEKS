@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28abf78f423d89443b8d792d49eb204b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 5
   rb: {fileID: 293253900}
   GM: {fileID: 202321983}
 --- !u!114 &293253902
@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GM: {fileID: 202321983}
-  initialVelocity: {x: 0, y: 0, z: 0}
+  initialVelocity: {x: 0, y: 5, z: 0}
   minVelocity: 10
   rb: {fileID: 293253900}
 --- !u!64 &293253903
