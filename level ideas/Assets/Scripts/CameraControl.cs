@@ -42,7 +42,6 @@ public class CameraControl : MonoBehaviour
         }
         else if (camPos == 0)
         {
-            cam.fieldOfView = 90;
             newPos = new Vector3(15, 0, 0);
             target = Quaternion.Euler(0, -90, 0);
         }
@@ -70,7 +69,7 @@ public class CameraControl : MonoBehaviour
         if (scored)
         {
             camObj.transform.position = Vector3.Lerp(camObj.transform.position, newPos, camSpeed);
-
+            cam.fieldOfView = 90;
             transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
         }
     }
