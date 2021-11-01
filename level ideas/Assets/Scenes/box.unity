@@ -190,10 +190,10 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293253898}
   serializedVersion: 2
-  m_Mass: 0.0000001
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -250,6 +250,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335073406}
     m_Modifications:
+    - target: {fileID: 401081404998586739, guid: 8551b2edef11e4e498ae0f70c214143b, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 2495145708251477914, guid: 8551b2edef11e4e498ae0f70c214143b, type: 3}
       propertyPath: m_Name
       value: SM_paddleSwirl
@@ -257,6 +261,18 @@ PrefabInstance:
     - target: {fileID: 3020606251879574816, guid: 8551b2edef11e4e498ae0f70c214143b, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020606251879574816, guid: 8551b2edef11e4e498ae0f70c214143b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020606251879574816, guid: 8551b2edef11e4e498ae0f70c214143b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020606251879574816, guid: 8551b2edef11e4e498ae0f70c214143b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3020606251879574816, guid: 8551b2edef11e4e498ae0f70c214143b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4805,13 +4821,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335073406}
     m_Modifications:
+    - target: {fileID: 182142002439444932, guid: 8ca4f5170e7977f4f9aa95d2ea77cfbc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 3551304462807858262, guid: 8ca4f5170e7977f4f9aa95d2ea77cfbc, type: 3}
       propertyPath: m_Name
       value: SM_paddleCross
       objectReference: {fileID: 0}
     - target: {fileID: 4180207124784850668, guid: 8ca4f5170e7977f4f9aa95d2ea77cfbc, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4180207124784850668, guid: 8ca4f5170e7977f4f9aa95d2ea77cfbc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4180207124784850668, guid: 8ca4f5170e7977f4f9aa95d2ea77cfbc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4180207124784850668, guid: 8ca4f5170e7977f4f9aa95d2ea77cfbc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4180207124784850668, guid: 8ca4f5170e7977f4f9aa95d2ea77cfbc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10591,6 +10623,10 @@ PrefabInstance:
     - target: {fileID: 5085529485386024465, guid: 598c42b65bd220e4780ee7a07aa62005, type: 3}
       propertyPath: m_Name
       value: Ball_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085529485386024465, guid: 598c42b65bd220e4780ee7a07aa62005, type: 3}
+      propertyPath: m_TagString
+      value: Ball
       objectReference: {fileID: 0}
     - target: {fileID: 6010553851941676153, guid: 598c42b65bd220e4780ee7a07aa62005, type: 3}
       propertyPath: m_LocalPosition.x
