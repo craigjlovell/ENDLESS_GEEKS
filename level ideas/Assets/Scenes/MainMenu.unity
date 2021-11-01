@@ -182,12 +182,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194168403}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -540, y: -254.55042, z: 0}
+  m_LocalScale: {x: 0.98092645, y: 0.98092645, z: 0.98092645}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 450371511}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &278719610
 GameObject:
@@ -302,7 +302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd996fbc5b7540e41a8d05bc6a5dbbfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 278719613}
 --- !u!1 &418881611
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +426,7 @@ RectTransform:
   m_Children:
   - {fileID: 946910119}
   - {fileID: 1749165218}
+  - {fileID: 194168406}
   m_Father: {fileID: 278719614}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -852,8 +852,8 @@ GameObject:
   - component: {fileID: 1985953641}
   - component: {fileID: 1985953645}
   - component: {fileID: 1985953644}
-  - component: {fileID: 1985953643}
   - component: {fileID: 1985953642}
+  - component: {fileID: 1985953643}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -878,8 +878,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.6876, y: -5}
-  m_SizeDelta: {x: 279.492, y: 88.6398}
+  m_AnchoredPosition: {x: 56, y: -4}
+  m_SizeDelta: {x: 253.5813, y: 85.6501}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1985953642
 MonoBehaviour:
@@ -927,7 +927,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1985953643}
         m_TargetAssemblyTypeName: GameStateController, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -949,7 +949,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd996fbc5b7540e41a8d05bc6a5dbbfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 278719613}
 --- !u!114 &1985953644
 MonoBehaviour:
   m_ObjectHideFlags: 0
