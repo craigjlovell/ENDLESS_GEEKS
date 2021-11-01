@@ -6,6 +6,8 @@ public class Score : MonoBehaviour
 {
     public int scorePlayer1;
     public int scorePlayer2;
+    public int scoreCam;
+    public int scoreDiv;
     public GUIStyle style;
 
     void OnGUI()
@@ -17,5 +19,10 @@ public class Score : MonoBehaviour
         string text = scorePlayer1 + " / " + scorePlayer2;
 
         GUI.Label(new Rect(x - (width / 2f), y, width, height), text, style);
+    }
+
+    private void Update()
+    {
+        scoreCam = (scorePlayer2 - scorePlayer1) / scoreDiv;
     }
 }

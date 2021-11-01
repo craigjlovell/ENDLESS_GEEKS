@@ -5246,6 +5246,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scorePlayer1: 0
   scorePlayer2: 0
+  scoreCam: 0
+  scoreDiv: 1
   style:
     m_Name: 
     m_Normal:
@@ -5461,7 +5463,7 @@ MonoBehaviour:
   camSpeed: 5
   smooth: 5
   target: {x: 0, y: 0, z: 0, w: 0}
-  scored: 0
+  score: {fileID: 984658286}
 --- !u!1 &1171979046
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class CameraControl : MonoBehaviour
     public float camSpeed;
     [SerializeField] float smooth;
     public Quaternion target;
-    [SerializeField] bool scored;
+    [SerializeField] Score score;
 
     private void Start()
     {
@@ -20,6 +20,7 @@ public class CameraControl : MonoBehaviour
 
     void Update()
     {
+        camPos = score.scoreCam;
         if (camPos == -4)
         {
             newPos = new Vector3(0, 0, -20);
@@ -66,7 +67,7 @@ public class CameraControl : MonoBehaviour
             target = Quaternion.Euler(0, -180, 0);
         }
 
-        if (scored)
+        if (score.scorePlayer1 != 0 || score.scorePlayer2 != 0)
         {
             camObj.transform.position = Vector3.Lerp(camObj.transform.position, newPos, camSpeed);
             cam.fieldOfView = 90;
