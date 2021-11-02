@@ -5377,7 +5377,7 @@ GameObject:
   - component: {fileID: 984658287}
   - component: {fileID: 984658286}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ScoreManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5616,6 +5616,7 @@ MonoBehaviour:
   smooth: 5
   target: {x: 0, y: 0, z: 0, w: 0}
   score: {fileID: 984658286}
+  game: {fileID: 202321983}
 --- !u!1 &1171979046
 GameObject:
   m_ObjectHideFlags: 0

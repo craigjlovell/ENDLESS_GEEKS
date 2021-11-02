@@ -16,7 +16,7 @@ public class CameraControl : MonoBehaviour
     [SerializeField] Score score;
     private bool hit = false;
 
-    GameManager game;
+    [SerializeField] GameManager game;
 
     private void Start()
     {
