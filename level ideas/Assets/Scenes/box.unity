@@ -374,10 +374,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28abf78f423d89443b8d792d49eb204b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   rb: {fileID: 293253900}
   GM: {fileID: 202321983}
-  initialVelocity: {x: 0, y: 5, z: 3}
+  RMin: 2
+  RMax: 5
+  ZInitSpeed: 3
   minVelocity: 10
 --- !u!64 &293253903
 MeshCollider:
@@ -9252,7 +9253,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh40322
+  m_Name: pb_Mesh41874
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

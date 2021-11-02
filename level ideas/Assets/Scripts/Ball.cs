@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speed;
     public Rigidbody rb;
     [SerializeField] GameManager GM;
     private AudioSource hitSource;
+
+    [SerializeField] int RMin;
+    [SerializeField] int RMax;
+    [SerializeField] float ZInitSpeed;
 
 
     [SerializeField]
@@ -32,6 +35,8 @@ public class Ball : MonoBehaviour
         lastFrameVelocity = rb.velocity;
     }
 
+
+    //plays sounds when the ball hits an object
     private void OnCollisionEnter(Collision collision)
     {
         //Joel's Audio Scripting//
@@ -45,6 +50,7 @@ public class Ball : MonoBehaviour
 
     }
 
+    //perfectly reflects off any collider perfectly
     private void Bounce(Vector3 collisionNormal)
     {
         var speed = lastFrameVelocity.magnitude;
@@ -54,16 +60,18 @@ public class Ball : MonoBehaviour
         rb.velocity = direction * Mathf.Max(speed, minVelocity);
     }
 
+
+    //when the game starts a new round the function determines its movement (call when needed)
     public void InitialVelocity()
     {
         if (GM.is3d)
         {
-            rb.AddForce(new Vector3(4, 0, 4), ForceMode.Impulse);
+            rb.AddForce(new Vector3(Random.Range(RMin, RMax), Random.Range(RMin, RMax), ZInitSpeed * (Random.Range(0, 2) * 2 - 1)), ForceMode.Impulse);
             rb.constraints = RigidbodyConstraints.None;
         }
         else
         {
-            rb.AddForce(new Vector3(0, 0, 4), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, Random.Range(RMin, RMax), ZInitSpeed * (Random.Range(0, 2) * 2 - 1)), ForceMode.Impulse);
             rb.constraints = RigidbodyConstraints.FreezePositionX;
         }
     }

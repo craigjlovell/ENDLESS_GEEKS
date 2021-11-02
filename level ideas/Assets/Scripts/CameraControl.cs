@@ -26,7 +26,11 @@ public class CameraControl : MonoBehaviour
     void Update()
     {
         camPos = score.scoreCam;
-        if (camPos == -4)
+        if (camPos < -4)
+        {
+            camPos = -4;
+        }
+        else if (camPos == -4)
         {
             target = Quaternion.Euler(0, 0, 0);
         }
@@ -62,6 +66,10 @@ public class CameraControl : MonoBehaviour
         {
             target = Quaternion.Euler(0, -180, 0);
         }
+        else if (camPos > 4)
+        {
+            camPos = 4;
+        }
         if (!hit)
         {
             if (score.scorePlayer1 != 0 || score.scorePlayer2 != 0)
@@ -69,11 +77,28 @@ public class CameraControl : MonoBehaviour
                 newPos = new Vector3(15, 0, 0);
                 camObj.transform.position = Vector3.Lerp(camObj.transform.position, newPos, camSpeed);
                 cam.fieldOfView = 90;
-                game.is3d = true;
                 hit = true;
                 Debug.Log("zoom");
             }
         }
+
+        if (camPos == -4 || camPos == 4)
+        {
+            game.is3d = true;
+            if (camPos == -4)
+            {
+                game.isLeft = true;
+            }
+            else if (camPos == 4)
+            {
+                game.isLeft = false;
+            }
+        }
+        else
+        {
+            game.is3d = false;
+        }
+
         CamMTObj.transform.rotation = Quaternion.Slerp(CamMTObj.transform.rotation, target, Time.deltaTime * smooth);
         Debug.Log("rotate");
     }
