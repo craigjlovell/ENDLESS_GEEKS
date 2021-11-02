@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     //variables
     public bool PLAY;
-    public bool is3d;
+    public bool is3d = false;
     public bool isLeft;
 
     //paddle vars

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CameraControl : MonoBehaviour
 {
     public GameObject camObj;
@@ -14,6 +15,8 @@ public class CameraControl : MonoBehaviour
     public Quaternion target;
     [SerializeField] Score score;
     private bool hit = false;
+
+    GameManager game;
 
     private void Start()
     {
@@ -37,7 +40,7 @@ public class CameraControl : MonoBehaviour
         }
         else if (camPos == -1)
         {
-            target = Quaternion.Euler(0, -67.5f, 0);
+            target = Quaternion.Euler(0, -67.5f, 0);            
         }
         else if (camPos == 0)
         {
@@ -66,6 +69,7 @@ public class CameraControl : MonoBehaviour
                 newPos = new Vector3(15, 0, 0);
                 camObj.transform.position = Vector3.Lerp(camObj.transform.position, newPos, camSpeed);
                 cam.fieldOfView = 90;
+                game.is3d = true;
                 hit = true;
                 Debug.Log("zoom");
             }
