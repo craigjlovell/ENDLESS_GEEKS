@@ -9,9 +9,6 @@ public class Ball : MonoBehaviour
     [SerializeField] GameManager GM;
     private AudioSource hitSource;
 
-    [SerializeField]
-    [Tooltip("Just for debugging, adds some velocity during OnEnable")]
-    private Vector3 initialVelocity;
 
     [SerializeField]
     private float minVelocity = 10f;
@@ -23,22 +20,11 @@ public class Ball : MonoBehaviour
     {
         hitSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
-        if (GM.is3d)
-        {
-            rb.AddForce(new Vector3(4, 0, 4), ForceMode.Impulse);
-            rb.constraints = RigidbodyConstraints.None;
-        }
-        else
-        {
-            rb.AddForce(new Vector3(0, 0, 4), ForceMode.Impulse);
-            rb.constraints = RigidbodyConstraints.FreezePositionX;
-        }
-
+        InitialVelocity();
     }
     private void OnEnable()
     {
         rb = GetComponent<Rigidbody>();
-        rb.velocity = initialVelocity;
     }
 
     private void Update()
@@ -66,5 +52,19 @@ public class Ball : MonoBehaviour
 
         Debug.Log("Out Direction: " + direction);
         rb.velocity = direction * Mathf.Max(speed, minVelocity);
+    }
+
+    public void InitialVelocity()
+    {
+        if (GM.is3d)
+        {
+            rb.AddForce(new Vector3(4, 0, 4), ForceMode.Impulse);
+            rb.constraints = RigidbodyConstraints.None;
+        }
+        else
+        {
+            rb.AddForce(new Vector3(0, 0, 4), ForceMode.Impulse);
+            rb.constraints = RigidbodyConstraints.FreezePositionX;
+        }
     }
 }
