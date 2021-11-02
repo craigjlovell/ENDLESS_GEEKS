@@ -5,6 +5,8 @@ using UnityEngine;
 public class BallBounce : MonoBehaviour
 {
     public GameManager GM;
+    //Joel's Audio Scripting//00
+    private AudioSource hitSource;
 
     [SerializeField]
     [Tooltip("Just for debugging, adds some velocity during OnEnable")]
@@ -15,6 +17,12 @@ public class BallBounce : MonoBehaviour
 
     private Vector3 lastFrameVelocity;
     [SerializeField] Rigidbody rb;
+
+    //Joel's Audio Scripting//
+    private void Start ()
+    {
+        hitSource = GetComponent<AudioSource>();
+    }
 
     private void OnEnable()
     {
@@ -27,9 +35,17 @@ public class BallBounce : MonoBehaviour
         lastFrameVelocity = rb.velocity;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
+    private void OnCollisionEnter(Collision collision){
+        //Joel's Audio Scripting//
+        if (collision.gameObject.tag == "Paddle")
+        {
+            hitSource.Play();
+
+        }
+
         Bounce(collision.contacts[0].normal);
+        //hitSource.Play();
+
     }
 
     private void Bounce(Vector3 collisionNormal)

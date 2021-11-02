@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Score1
   - Score2
+  - Paddle
   layers:
   - Default
   - TransparentFX
