@@ -78,13 +78,14 @@ public class CameraControl : MonoBehaviour
                 camObj.transform.position = Vector3.Lerp(camObj.transform.position, newPos, camSpeed);
                 cam.fieldOfView = 90;
                 hit = true;
+                game.is3d = true;
                 Debug.Log("zoom");
             }
         }
 
         if (camPos == -4 || camPos == 4)
         {
-            game.is3d = true;
+            
             if (camPos == -4)
             {
                 game.isLeft = true;
@@ -96,7 +97,7 @@ public class CameraControl : MonoBehaviour
         }
         else
         {
-            game.is3d = false;
+            
         }
 
         CamMTObj.transform.rotation = Quaternion.Slerp(CamMTObj.transform.rotation, target, Time.deltaTime * smooth);
