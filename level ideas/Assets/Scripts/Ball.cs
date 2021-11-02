@@ -7,10 +7,21 @@ public class Ball : MonoBehaviour
     public float speed;
     public Rigidbody rb;
     [SerializeField] GameManager GM;
+    private AudioSource hitSource;
+
+    [SerializeField]
+    [Tooltip("Just for debugging, adds some velocity during OnEnable")]
+    private Vector3 initialVelocity;
+
+    [SerializeField]
+    private float minVelocity = 10f;
+
+    private Vector3 lastFrameVelocity;
 
     // Start is called before the first frame update
     void Start()
     {
+        hitSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         if (GM.is3d)
         {
@@ -23,5 +34,37 @@ public class Ball : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezePositionX;
         }
 
+    }
+    private void OnEnable()
+    {
+        rb = GetComponent<Rigidbody>();
+        rb.velocity = initialVelocity;
+    }
+
+    private void Update()
+    {
+        lastFrameVelocity = rb.velocity;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //Joel's Audio Scripting//
+        if (collision.gameObject.tag == "Paddle")
+        {
+            hitSource.Play();
+
+        }
+
+        Bounce(collision.contacts[0].normal);
+
+    }
+
+    private void Bounce(Vector3 collisionNormal)
+    {
+        var speed = lastFrameVelocity.magnitude;
+        var direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
+
+        Debug.Log("Out Direction: " + direction);
+        rb.velocity = direction * Mathf.Max(speed, minVelocity);
     }
 }

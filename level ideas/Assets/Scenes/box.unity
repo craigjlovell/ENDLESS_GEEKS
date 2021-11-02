@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38204
+  m_Name: pb_Mesh40220
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -319,8 +319,8 @@ MonoBehaviour:
   PLAY: 1
   is3d: 0
   isLeft: 0
-  PaddleXSpeed: 5
-  PaddleYSpeed: 5
+  PaddleXSpeed: 10
+  PaddleYSpeed: 10
   acceleration: 1.07
 --- !u!4 &202321984
 Transform:
@@ -377,22 +377,8 @@ MonoBehaviour:
   speed: 5
   rb: {fileID: 293253900}
   GM: {fileID: 202321983}
---- !u!114 &293253902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293253898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f4168f5be0706843b2a7c9715f9c49f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GM: {fileID: 202321983}
-  initialVelocity: {x: 0, y: 5, z: 0}
+  initialVelocity: {x: 0, y: 5, z: 3}
   minVelocity: 10
-  rb: {fileID: 293253900}
 --- !u!64 &293253903
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -956,9 +942,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 765c47dfb2c0fa247891d89b258dd7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   player: 0
   GM: {fileID: 202321983}
+--- !u!65 &492174603
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492174600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08, y: 0.46, z: 1.09}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &495850807
 GameObject:
   m_ObjectHideFlags: 0
@@ -3970,7 +3968,7 @@ GameObject:
   - component: {fileID: 504542491}
   m_Layer: 0
   m_Name: walls
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3999,7 +3997,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38226
+  m_Name: pb_Mesh40242
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4449,7 +4447,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38354
+  m_Name: pb_Mesh40376
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4631,7 +4629,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38276
+  m_Name: pb_Mesh40292
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4880,7 +4878,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38366
+  m_Name: pb_Mesh40388
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5044,7 +5042,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38288
+  m_Name: pb_Mesh40304
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5208,7 +5206,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38186
+  m_Name: pb_Mesh40202
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9254,7 +9252,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38306
+  m_Name: pb_Mesh40322
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10069,7 +10067,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38326
+  m_Name: pb_Mesh40342
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10921,7 +10919,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 765c47dfb2c0fa247891d89b258dd7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   player: 1
   GM: {fileID: 202321983}
 --- !u!1 &2012114654
