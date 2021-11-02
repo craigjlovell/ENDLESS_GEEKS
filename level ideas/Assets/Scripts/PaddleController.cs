@@ -10,7 +10,6 @@ public enum ePlayer
 
 public class PaddleController : MonoBehaviour
 {
-    public float speed = 5f;
     public ePlayer player;
     public GameManager GM;
 
