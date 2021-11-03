@@ -11,6 +11,7 @@ public class Ball : MonoBehaviour
     [SerializeField] int RMin;
     [SerializeField] int RMax;
     [SerializeField] float ZInitSpeed;
+    [SerializeField] float bounceVariance;
 
 
     [SerializeField]
@@ -46,18 +47,30 @@ public class Ball : MonoBehaviour
 
         }
 
-        Bounce(collision.contacts[0].normal);
+        Bounce(collision.contacts[0].normal, collision.contacts[0].point, collision.transform.position, collision.gameObject.tag);
 
+        foreach (ContactPoint contact in collision.contacts)
+        {
+            Debug.DrawRay(contact.point, contact.normal, Color.white);
+            Debug.Log(contact.point);
+        }
     }
 
     //perfectly reflects off any collider perfectly
-    private void Bounce(Vector3 collisionNormal)
+    private void Bounce(Vector3 collisionNormal, Vector3 CollisionPoint, Vector3 CollisionTransform, string CollisionTag)
     {
         var speed = lastFrameVelocity.magnitude;
         var direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
 
         Debug.Log("Out Direction: " + direction);
-        rb.velocity = direction * Mathf.Max(speed, minVelocity);
+        if (CollisionTag == "Paddle")
+        {
+            rb.velocity = direction + (CollisionPoint - CollisionTransform) * Mathf.Max(speed, minVelocity);
+        }
+        else
+        {
+            rb.velocity = direction * Mathf.Max(speed, minVelocity);
+        }
     }
 
 

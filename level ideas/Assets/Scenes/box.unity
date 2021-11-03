@@ -419,9 +419,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 293253900}
   GM: {fileID: 202321983}
-  RMin: 2
-  RMax: 5
+  RMin: 0
+  RMax: 0
   ZInitSpeed: 3
+  bounceVariance: 5
   minVelocity: 10
 --- !u!64 &293253903
 MeshCollider:
