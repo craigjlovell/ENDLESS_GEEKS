@@ -12,6 +12,8 @@ public class PaddleController : MonoBehaviour
 {
     public ePlayer player;
     public GameManager GM;
+    private Rigidbody rb;
+    private Vector3 _dir;
 
     // Start is called before the first frame update
     void Start()
@@ -46,5 +48,14 @@ public class PaddleController : MonoBehaviour
             }
         }
         transform.position += new Vector3(0f, inputSpeedY * GM.PaddleXSpeed * Time.deltaTime, 0f);
+
+        
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Paddle" && collision.gameObject.tag == "Wall")
+        {
+
+        }
     }
 }
