@@ -55,7 +55,7 @@ public class PaddleController : MonoBehaviour
     {
         if(collision.gameObject.tag == "Paddle" && collision.gameObject.tag == "Wall")
         {
-
+            
         }
     }
 }

@@ -26,13 +26,18 @@ public class Ball : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         InitialVelocity();
     }
-    private void OnEnable()
+
+    void StartGame()
     {
-        rb = GetComponent<Rigidbody>();
+        //if(Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    InitialVelocity();
+        //}
     }
 
-    private void Update()
+    void Update()
     {
+        //StartGame();
         lastFrameVelocity = rb.velocity;
     }
 
@@ -61,8 +66,9 @@ public class Ball : MonoBehaviour
     {
         var speed = lastFrameVelocity.magnitude;
         var direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
-
+        
         Debug.Log("Out Direction: " + direction);
+
         if (CollisionTag == "Paddle")
         {
             rb.velocity = direction + (CollisionPoint - CollisionTransform) * Mathf.Max(speed, minVelocity);
