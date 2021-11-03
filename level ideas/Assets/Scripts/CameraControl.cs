@@ -1,15 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Cinemachine;
 
 public class CameraControl : MonoBehaviour
 {
-    public GameObject camObj;
-    public GameObject CamMTObj;
-    private Camera cam;
     public int camPos;
-    private Vector3 newPos;
     public float camSpeed;
     [SerializeField] float smooth;
     public Quaternion target;
@@ -18,9 +14,29 @@ public class CameraControl : MonoBehaviour
 
     [SerializeField] GameManager game;
 
+    [SerializeField] CinemachineVirtualCamera CMtwoD;
+    [SerializeField] CinemachineVirtualCamera CMzero;
+    [SerializeField] CinemachineVirtualCamera CMone;
+    [SerializeField] CinemachineVirtualCamera CMtwo;
+    [SerializeField] CinemachineVirtualCamera CMthree;
+    [SerializeField] CinemachineVirtualCamera CMfour;
+    [SerializeField] CinemachineVirtualCamera CMnOne;
+    [SerializeField] CinemachineVirtualCamera CMnTwo;
+    [SerializeField] CinemachineVirtualCamera CMnThree;
+    [SerializeField] CinemachineVirtualCamera CMnFour;
+
     private void Start()
     {
-        cam = camObj.GetComponent<Camera>();
+        CMtwoD.Priority = 1;
+        CMnFour.Priority = 0;
+        CMnThree.Priority = 0;
+        CMnTwo.Priority = 0;
+        CMnOne.Priority = 0;
+        CMzero.Priority = 0;
+        CMone.Priority = 0;
+        CMtwo.Priority = 0;
+        CMthree.Priority = 0;
+        CMfour.Priority = 0;
     }
 
     void Update()
@@ -32,39 +48,56 @@ public class CameraControl : MonoBehaviour
         }
         else if (camPos == -4)
         {
-            target = Quaternion.Euler(0, 0, 0);
+            CMnFour.Priority = 1;
+            CMnThree.Priority = 0;
         }
         else if (camPos == -3)
         {
-            target = Quaternion.Euler(0, -22.5f, 0);
+            CMnFour.Priority = 0;
+            CMnThree.Priority = 1;
+            CMnTwo.Priority = 0;
         }
         else if (camPos == -2)
         {
-            target = Quaternion.Euler(0, -45, 0);
+            CMnThree.Priority = 0;
+            CMnTwo.Priority = 1;
+            CMnOne.Priority = 0;
         }
         else if (camPos == -1)
         {
-            target = Quaternion.Euler(0, -67.5f, 0);            
+            CMnTwo.Priority = 0;
+            CMnOne.Priority = 1;
+            CMzero.Priority = 0;
         }
-        else if (camPos == 0)
+        else if (camPos == 0 && hit)
         {
-            target = Quaternion.Euler(0, -90, 0);
+            CMnOne.Priority = 0;
+            CMzero.Priority = 1;
+            CMone.Priority = 0;
         }
         else if (camPos == 1)
         {
-            target = Quaternion.Euler(0, -112.5f, 0);
+            CMzero.Priority = 0;
+            CMone.Priority = 1;
+            CMtwo.Priority = 0;
         }
         else if (camPos == 2)
         {
-            target = Quaternion.Euler(0, -135, 0);
+            CMone.Priority = 0;
+            CMtwo.Priority = 1;
+            CMthree.Priority = 0;
         }
         else if (camPos == 3)
         {
-            target = Quaternion.Euler(0, -157.5f, 0);
+            CMtwo.Priority = 0;
+            CMthree.Priority = 1;
+            CMfour.Priority = 0;
         }
         else if (camPos == 4)
         {
-            target = Quaternion.Euler(0, -180, 0);
+            CMthree.Priority = 0;
+            CMfour.Priority = 1;
+
         }
         else if (camPos > 4)
         {
@@ -74,34 +107,19 @@ public class CameraControl : MonoBehaviour
         {
             if (score.scorePlayer1 != 0 || score.scorePlayer2 != 0)
             {
-                newPos = new Vector3(15, 0, 0);
-                camObj.transform.position = Vector3.Lerp(camObj.transform.position, newPos, camSpeed);
-                cam.fieldOfView = 90;
                 hit = true;
                 game.is3d = true;
                 Debug.Log("zoom");
             }
         }
-
-        if (camPos == -4 || camPos == 4)
+        if (camPos < -1)
         {
-            
-            if (camPos == -4)
-            {
-                game.isLeft = true;
-            }
-            else if (camPos == 4)
-            {
-                game.isLeft = false;
-            }
+            game.isLeft = true;
         }
-        else
+        else if (camPos >= 1)
         {
-            
+            game.isLeft = false;
         }
-
-        CamMTObj.transform.rotation = Quaternion.Slerp(CamMTObj.transform.rotation, target, Time.deltaTime * smooth);
-        Debug.Log("rotate");
     }
 }
 
