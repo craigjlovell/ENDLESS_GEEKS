@@ -7,10 +7,25 @@ public class GameStateController : MonoBehaviour
 {
     //public Canvas canvas = null;
 
-    public void MainMenu()
+    public void Game()
     {
         SceneManager.LoadScene("box");
     }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void LevelSelect()
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
+
+    public void About()
+    {
+        SceneManager.LoadScene("About");
+    }
+
 
     public void Exit()
     {
