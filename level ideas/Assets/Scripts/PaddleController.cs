@@ -43,8 +43,8 @@ public class PaddleController : MonoBehaviour
             
         }
 
-        Vector3 tempVect = new Vector3(inputX, inputY, 0);
-        tempVect = tempVect.normalized * speed * Time.deltaTime;
+        //Vector3 tempVect = new Vector3(inputX, inputY, 0);
+        //tempVect = tempVect.normalized * speed * Time.deltaTime;
 
         if (GM.is3d)
         {
