@@ -43,34 +43,40 @@ public class PaddleController : MonoBehaviour
             
         }
 
-        //Vector3 tempVect = new Vector3(inputX, inputY, 0);
-        //tempVect = tempVect.normalized * speed * Time.deltaTime;
+        Vector3 tempVect = new Vector3(inputX, inputY, 0);
+        tempVect = tempVect.normalized * speed * Time.deltaTime;
 
         if (GM.is3d)
         {
             if (CC.camPos == 0)
             {
-                if (player == ePlayer.PLAYER1) rb.velocity = new Vector3(-inputX, rb.velocity.y, 0f);
-                else if (player == ePlayer.PLAYER2) rb.velocity = new Vector3(inputX, rb.velocity.y, 0f);
+                if (player == ePlayer.PLAYER1)
+                {
+                    //rb.MovePosition(-transform.position + tempVect * speed);
+                    rb.velocity = new Vector3(-inputX, rb.velocity.y, 0f);
+                }
+                else if (player == ePlayer.PLAYER2)
+                {
+                    //rb.MovePosition(transform.position + tempVect * speed);
+                    rb.velocity = new Vector3(inputX, rb.velocity.y, 0f);
+                }
             }
             else
             {
                 if (GM.isLeft)
                 {
-                    rb.velocity = new Vector3(inputX, rb.velocity.y, 0f);
                     //rb.MovePosition(transform.position + tempVect * speed);
+                    rb.velocity = new Vector3(inputX, rb.velocity.y, 0f);                    
                 }
                 else
                 {
-                    rb.velocity = new Vector3(-inputX, rb.velocity.y, 0f);
-                    //rb.MovePosition(-transform.position + tempVect * speed);
+                    //rb.MovePosition(-transform.position + tempVect *  speed);
+                    rb.velocity = new Vector3(-inputX, rb.velocity.y, 0f);                    
                 }
             }
         }
         rb.velocity = new Vector3(rb.velocity.x, inputY, 0f);
         //rb.MovePosition(transform.position + tempVect * speed);
-        //rb.MovePosition(transform.position + m_Input * Time.deltaTime * speed);
-        //rb.MovePosition(transform.position + m_Input2 * Time.deltaTime * speed);
     }
     private void FixedUpdate()
     {
