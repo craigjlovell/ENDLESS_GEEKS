@@ -10,11 +10,12 @@ public class PaddleController : MonoBehaviour
 {
     public ePlayer player;
     public GameManager GM;
-    public Rigidbody rb;
+    public CameraControl CC;
+    [SerializeField] Rigidbody rb;
     private float inputX;
     private float inputY;
 
-    private float speed;
+    public float speed;
 
 
     // Start is called before the first frame update
@@ -27,30 +28,49 @@ public class PaddleController : MonoBehaviour
     private void Update()
     {
         speed = 10f;
+        //Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxisRaw("Vertical"),0); 
+        //Vector3 m_Input2 = new Vector3(Input.GetAxis("Horizontal2"), Input.GetAxisRaw("Vertical2"), 0);
         if (player == ePlayer.PLAYER1)
         {
-            inputX = Input.GetAxisRaw("Horizontal") * GM.PaddleXSpeed;
+            inputX = Input.GetAxisRaw("Horizontal")* GM.PaddleXSpeed;
             inputY = Input.GetAxisRaw("Vertical") * GM.PaddleYSpeed;
+            
         }
         else if (player == ePlayer.PLAYER2)
         {
             inputX = Input.GetAxisRaw("Horizontal2") * GM.PaddleXSpeed;
             inputY = Input.GetAxisRaw("Vertical2") * GM.PaddleYSpeed;
+            
         }
+
+        //Vector3 tempVect = new Vector3(inputX, inputY, 0);
+        //tempVect = tempVect.normalized * speed * Time.deltaTime;
 
         if (GM.is3d)
         {
-            if (GM.isLeft)
-            {                
-                rb.velocity = new Vector3(inputX, rb.velocity.y, 0f);
+            if (CC.camPos == 0)
+            {
+                if (player == ePlayer.PLAYER1) rb.velocity = new Vector3(-inputX, rb.velocity.y, 0f);
+                else if (player == ePlayer.PLAYER2) rb.velocity = new Vector3(inputX, rb.velocity.y, 0f);
             }
             else
-            {                
-                rb.velocity = new Vector3(-inputX, rb.velocity.y, 0f);
+            {
+                if (GM.isLeft)
+                {
+                    rb.velocity = new Vector3(inputX, rb.velocity.y, 0f);
+                    //rb.MovePosition(transform.position + tempVect * speed);
+                }
+                else
+                {
+                    rb.velocity = new Vector3(-inputX, rb.velocity.y, 0f);
+                    //rb.MovePosition(-transform.position + tempVect * speed);
+                }
             }
         }
         rb.velocity = new Vector3(rb.velocity.x, inputY, 0f);
-
+        //rb.MovePosition(transform.position + tempVect * speed);
+        //rb.MovePosition(transform.position + m_Input * Time.deltaTime * speed);
+        //rb.MovePosition(transform.position + m_Input2 * Time.deltaTime * speed);
     }
     private void FixedUpdate()
     {
