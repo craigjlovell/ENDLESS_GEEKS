@@ -11,6 +11,8 @@ public class Score : MonoBehaviour
     public int scoreCam;
     public int scoreDiv = 1;
 
+    public bool Player1scored;
+
     public TextMeshProUGUI score1;
     public TextMeshProUGUI score2;
 

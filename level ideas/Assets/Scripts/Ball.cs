@@ -6,11 +6,13 @@ public class Ball : MonoBehaviour
 {
     public Rigidbody rb;
     [SerializeField] GameManager GM;
+    [SerializeField] Score score;
     private AudioSource hitSource;
 
     [SerializeField] int RMin;
     [SerializeField] int RMax;
     [SerializeField] float ZInitSpeed;
+    private float ZSpeed;
     [SerializeField] float bounceVariance;
 
 
@@ -97,14 +99,18 @@ public class Ball : MonoBehaviour
         yield return new WaitForSeconds(GM.roundStartTime);
         ball.SetActive(true);
         spawn.SetActive(false);
+
+        if (score.Player1scored) ZSpeed = ZInitSpeed;
+        else ZSpeed = -ZInitSpeed;
+
         if (GM.is3d)
         {
-            rb.AddForce(new Vector3(Random.Range(RMin, RMax), Random.Range(RMin, RMax), ZInitSpeed * (Random.Range(0, 2) * 2 - 1)), ForceMode.Impulse);
+            rb.AddForce(new Vector3(Random.Range(RMin, RMax), Random.Range(RMin, RMax), ZSpeed), ForceMode.Impulse);
             rb.constraints = RigidbodyConstraints.None;
         }
         else
         {
-            rb.AddForce(new Vector3(0, Random.Range(RMin, RMax), ZInitSpeed * (Random.Range(0, 2) * 2 - 1)), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, Random.Range(RMin, RMax), ZSpeed), ForceMode.Impulse);
             rb.constraints = RigidbodyConstraints.FreezePositionX;
         }
     }
