@@ -47,7 +47,7 @@ public class PaddleController : MonoBehaviour
                 transform.position += new Vector3(inputSpeedX * -GM.PaddleXSpeed * Time.deltaTime, 0f, 0f);
             }
         }
-        transform.position += new Vector3(0f, inputSpeedY * GM.PaddleXSpeed * Time.deltaTime, 0f);
+        transform.position += new Vector3(0f, inputSpeedY * GM.PaddleYSpeed * Time.deltaTime, 0f);
 
         
     }

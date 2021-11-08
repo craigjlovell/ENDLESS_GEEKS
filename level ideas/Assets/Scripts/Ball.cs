@@ -9,7 +9,6 @@ public class Ball : MonoBehaviour
     private AudioSource hitSource;
 
     [SerializeField] int RMin;
-    [SerializeField] int xMin;
     [SerializeField] int RMax;
     [SerializeField] float ZInitSpeed;
     [SerializeField] float bounceVariance;
