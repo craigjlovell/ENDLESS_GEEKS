@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public enum ePlayer
@@ -12,50 +10,51 @@ public class PaddleController : MonoBehaviour
 {
     public ePlayer player;
     public GameManager GM;
-    private Rigidbody rb;
-    private Vector3 _dir;
+    public Rigidbody rb;
+    private float inputX;
+    private float inputY;
+
+    private float speed;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        float inputSpeedX = 0f;
-        float inputSpeedY = 0f;
-        if(player == ePlayer.PLAYER1)
+        speed = 10f;
+        if (player == ePlayer.PLAYER1)
         {
-            inputSpeedX = Input.GetAxisRaw("Horizontal");
-            inputSpeedY = Input.GetAxisRaw("Vertical");
+            inputX = Input.GetAxisRaw("Horizontal") * GM.PaddleXSpeed;
+            inputY = Input.GetAxisRaw("Vertical") * GM.PaddleYSpeed;
         }
-        else if(player == ePlayer.PLAYER2)
+        else if (player == ePlayer.PLAYER2)
         {
-            inputSpeedX = Input.GetAxisRaw("Horizontal2");
-            inputSpeedY = Input.GetAxisRaw("Vertical2");
+            inputX = Input.GetAxisRaw("Horizontal2") * GM.PaddleXSpeed;
+            inputY = Input.GetAxisRaw("Vertical2") * GM.PaddleYSpeed;
         }
+
         if (GM.is3d)
         {
             if (GM.isLeft)
-            {
-                transform.position += new Vector3(inputSpeedX * GM.PaddleXSpeed * Time.deltaTime, 0f, 0f);
+            {                
+                rb.velocity = new Vector3(inputX, rb.velocity.y, 0f);
             }
             else
-            {
-                transform.position += new Vector3(inputSpeedX * -GM.PaddleXSpeed * Time.deltaTime, 0f, 0f);
+            {                
+                rb.velocity = new Vector3(-inputX, rb.velocity.y, 0f);
             }
         }
-        transform.position += new Vector3(0f, inputSpeedY * GM.PaddleYSpeed * Time.deltaTime, 0f);
+        rb.velocity = new Vector3(rb.velocity.x, inputY, 0f);
 
-        
     }
-    private void OnCollisionEnter(Collision collision)
+    private void FixedUpdate()
     {
-        if(collision.gameObject.tag == "Paddle" && collision.gameObject.tag == "Wall")
-        {
-            
-        }
+
     }
+
 }
