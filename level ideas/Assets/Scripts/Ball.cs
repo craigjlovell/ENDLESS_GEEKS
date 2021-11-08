@@ -14,6 +14,10 @@ public class Ball : MonoBehaviour
     [SerializeField] float bounceVariance;
 
 
+    [SerializeField] GameObject ball;
+    [SerializeField] GameObject spawn;
+
+
     [SerializeField]
     private float minVelocity = 10f;
 
@@ -83,6 +87,16 @@ public class Ball : MonoBehaviour
     //when the game starts a new round the function determines its movement (call when needed)
     public void InitialVelocity()
     {
+        StartCoroutine(RoundStart());
+    }
+
+    IEnumerator RoundStart()
+    {
+        ball.SetActive(false);
+        spawn.SetActive(true);
+        yield return new WaitForSeconds(GM.roundStartTime);
+        ball.SetActive(true);
+        spawn.SetActive(false);
         if (GM.is3d)
         {
             rb.AddForce(new Vector3(Random.Range(RMin, RMax), Random.Range(RMin, RMax), ZInitSpeed * (Random.Range(0, 2) * 2 - 1)), ForceMode.Impulse);
@@ -94,4 +108,5 @@ public class Ball : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezePositionX;
         }
     }
+
 }

@@ -15,4 +15,5 @@ public class GameManager : MonoBehaviour
 
     //ball vars
     public float acceleration;
+    public float roundStartTime;
 }
