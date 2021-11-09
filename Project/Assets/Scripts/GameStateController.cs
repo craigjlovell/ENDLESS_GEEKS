@@ -26,6 +26,11 @@ public class GameStateController : MonoBehaviour
         SceneManager.LoadScene("About");
     }
 
+    public void Customisation()
+    {
+        SceneManager.LoadScene("Customisation");
+    }
+
 
     public void Exit()
     {

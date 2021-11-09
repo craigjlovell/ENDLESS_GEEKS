@@ -1478,7 +1478,7 @@ GameObject:
   - component: {fileID: 1013816002}
   - component: {fileID: 1013816001}
   m_Layer: 5
-  m_Name: Play Game
+  m_Name: Customisation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1525,7 +1525,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 25521e58cf3ca734bb80f1a4f2286431, type: 3}
-    m_FontSize: 35
+    m_FontSize: 33
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1536,7 +1536,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Levels
+  m_Text: Customize
 --- !u!222 &1013816002
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2150,7 +2150,7 @@ GameObject:
   - component: {fileID: 1524226282}
   - component: {fileID: 1524226286}
   m_Layer: 5
-  m_Name: Levels
+  m_Name: Customise
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2234,7 +2234,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1524226282}
         m_TargetAssemblyTypeName: GameStateController, Assembly-CSharp
-        m_MethodName: LevelSelect
+        m_MethodName: Customisation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2793,7 +2793,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1985953643}
         m_TargetAssemblyTypeName: GameStateController, Assembly-CSharp
-        m_MethodName: Game
+        m_MethodName: LevelSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

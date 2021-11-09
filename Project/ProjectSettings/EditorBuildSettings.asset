@@ -6,16 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Sandbox/QuickSceneSelect/QuickSceneSelect.unity
-    guid: f2d47cf8377ad114287afee32be31018
+    path: Assets/Scenes/MainMenu.unity
+    guid: 1a99712d1b84eb947a45f03060c3ad29
   - enabled: 1
-    path: Assets/Sandbox/URP_SampleScene/URP_SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 147ea3ca3ab6c4e46a0dc13d08265f4f
   - enabled: 1
-    path: Assets/Sandbox/StarterAssets/FirstPirson.unity
-    guid: 707acc8dffb72b144bb1ffbe1c965f3d
+    path: Assets/Scenes/Customisation.unity
+    guid: 831878f936ea9914ab508f9faca9864f
   - enabled: 1
-    path: Assets/Sandbox/StarterAssets/ThirdPerson.unity
-    guid: e9017d5f96b9f09489b4b37e1d6eb914
+    path: Assets/Scenes/box.unity
+    guid: e8939234e6e6018409e09e43c5d95065
+  - enabled: 1
+    path: Assets/Scenes/About.unity
+    guid: 0ea314c280f8dbd479d71d5924980a01
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
