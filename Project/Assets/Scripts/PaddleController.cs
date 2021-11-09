@@ -77,10 +77,16 @@ public class PaddleController : MonoBehaviour
         }
         rb.velocity = new Vector3(rb.velocity.x, inputY, 0f);
         //rb.MovePosition(transform.position + tempVect * speed);
-    }
-    private void FixedUpdate()
-    {
 
+        if (player == ePlayer.PLAYER1)
+        {
+            if (Input.GetAxisRaw("Horizontal") == 0) rb.velocity = new Vector3(0, rb.velocity.y, 0);
+            if (Input.GetAxisRaw("Vertical") == 0) rb.velocity = new Vector3(rb.velocity.x, 0, 0);
+        }
+        if (player == ePlayer.PLAYER2)
+        {
+            if (Input.GetAxisRaw("Horizontal2") == 0) rb.velocity = new Vector3(0, rb.velocity.y, 0);
+            if (Input.GetAxisRaw("Vertical2") == 0) rb.velocity = new Vector3(rb.velocity.x, 0, 0);
+        }
     }
-
 }
