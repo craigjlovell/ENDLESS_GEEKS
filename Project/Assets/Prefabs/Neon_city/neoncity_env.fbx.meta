@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: 2617a144be9f6b14a8dffe7b43e131a4
+guid: 29e3df19a5d8f724c8c12bbc04478500
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_building_concrete
-    second: {fileID: 2100000, guid: de44481135567bd4e826cbc7150c3910, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_building_metal
-    second: {fileID: 2100000, guid: 044799cbbcf11a547a0804685b8fc355, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_building_window
-    second: {fileID: 2100000, guid: 9064aeb66bb47c64fa0263a439899795, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
