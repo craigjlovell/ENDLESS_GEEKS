@@ -33,14 +33,6 @@ public class Ball : MonoBehaviour
         InitialVelocity();
     }
 
-    void StartGame()
-    {
-        //if(Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    InitialVelocity();
-        //}
-    }
-
     void Update()
     {
         //StartGame();
