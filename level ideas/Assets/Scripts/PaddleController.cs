@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public enum ePlayer
 {
@@ -70,12 +72,5 @@ public class PaddleController : MonoBehaviour
         }        
         rb.MovePosition(transform.position + movement);
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if(collision.gameObject.tag == "Wall")
-    //    {
-    //        //rb.velocity = new Vector3(0, 0, 0);
-    //    }
-    //}
 
 }
