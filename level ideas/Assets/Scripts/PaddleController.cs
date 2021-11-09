@@ -18,6 +18,11 @@ public class PaddleController : MonoBehaviour
     private float inputX;
     private float inputY;
 
+    public float maxUp;
+    public float maxDown;
+    public float maxLeft;
+    public float maxRight;
+
     public float speed;
 
 
@@ -32,18 +37,38 @@ public class PaddleController : MonoBehaviour
     {
         if (player == ePlayer.PLAYER1)
         {
-            inputX = Input.GetAxisRaw("Horizontal")* GM.PaddleXSpeed;
+            inputX = Input.GetAxisRaw("Horizontal") * GM.PaddleXSpeed;
             inputY = Input.GetAxisRaw("Vertical") * GM.PaddleYSpeed;
-            
+
         }
         else if (player == ePlayer.PLAYER2)
         {
             inputX = Input.GetAxisRaw("Horizontal2") * GM.PaddleXSpeed;
             inputY = Input.GetAxisRaw("Vertical2") * GM.PaddleYSpeed;
-            
+
         }
+    }
+
+    private void FixedUpdate()
+    {
 
         Vector3 movement = new Vector3(inputX * GM.PaddleXSpeed * Time.deltaTime, inputY * GM.PaddleYSpeed * Time.deltaTime, 0);
+        if(transform.position.y >= maxUp && movement.y > 0)
+        {
+            movement.y = 0;
+        }
+        else if (transform.position.y <= maxDown && movement.y < 0)
+        {
+            movement.y = 0;
+        }
+        else if (transform.position.x >= maxRight && movement.x > 0)
+        {
+            movement.x = 0;
+        }
+        else if (transform.position.x <= maxLeft && movement.x < 0)
+        {
+            movement.x = 0;
+        }
 
         if (GM.is3d)
         {
@@ -62,15 +87,18 @@ public class PaddleController : MonoBehaviour
             {
                 if (GM.isLeft)
                 {
-                    rb.MovePosition(transform.position + movement);                
+                    rb.MovePosition(transform.position + movement);
                 }
                 else
                 {
-                    rb.MovePosition(-transform.position + movement);                                      
+                    rb.MovePosition(-transform.position + movement);
                 }
             }
-        }        
+        }
         rb.MovePosition(transform.position + movement);
+
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, maxLeft, maxRight), Mathf.Clamp(transform.position.y, maxDown, maxUp), transform.position.z);
+        
     }
 
 }
