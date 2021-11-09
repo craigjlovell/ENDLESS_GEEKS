@@ -8,10 +8,11 @@ public enum ePlayer
 
 public class PaddleController : MonoBehaviour
 {
+    [SerializeField] Rigidbody rb;
+
     public ePlayer player;
     public GameManager GM;
-    public CameraControl CC;
-    [SerializeField] Rigidbody rb;
+    public CameraControl CC;    
     private float inputX;
     private float inputY;
 
@@ -27,9 +28,6 @@ public class PaddleController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        speed = 10f;
-        //Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxisRaw("Vertical"),0); 
-        //Vector3 m_Input2 = new Vector3(Input.GetAxis("Horizontal2"), Input.GetAxisRaw("Vertical2"), 0);
         if (player == ePlayer.PLAYER1)
         {
             inputX = Input.GetAxisRaw("Horizontal")* GM.PaddleXSpeed;
@@ -43,8 +41,7 @@ public class PaddleController : MonoBehaviour
             
         }
 
-        //Vector3 tempVect = new Vector3(inputX, inputY, 0);
-        //tempVect = tempVect.normalized * speed * Time.deltaTime;
+        Vector3 movement = new Vector3(inputX * GM.PaddleXSpeed * Time.deltaTime, inputY * GM.PaddleYSpeed * Time.deltaTime, 0);
 
         if (GM.is3d)
         {
@@ -52,35 +49,33 @@ public class PaddleController : MonoBehaviour
             {
                 if (player == ePlayer.PLAYER1)
                 {
-                    //rb.MovePosition(-transform.position + tempVect * speed);
-                    rb.velocity = new Vector3(-inputX, rb.velocity.y, 0f);
+                    rb.MovePosition(-transform.position + movement);
                 }
                 else if (player == ePlayer.PLAYER2)
                 {
-                    //rb.MovePosition(transform.position + tempVect * speed);
-                    rb.velocity = new Vector3(inputX, rb.velocity.y, 0f);
+                    rb.MovePosition(transform.position + movement);
                 }
             }
             else
             {
                 if (GM.isLeft)
                 {
-                    //rb.MovePosition(transform.position + tempVect * speed);
-                    rb.velocity = new Vector3(inputX, rb.velocity.y, 0f);                    
+                    rb.MovePosition(transform.position + movement);                
                 }
                 else
                 {
-                    //rb.MovePosition(-transform.position + tempVect *  speed);
-                    rb.velocity = new Vector3(-inputX, rb.velocity.y, 0f);                    
+                    rb.MovePosition(-transform.position + movement);                                      
                 }
             }
-        }
-        rb.velocity = new Vector3(rb.velocity.x, inputY, 0f);
-        //rb.MovePosition(transform.position + tempVect * speed);
+        }        
+        rb.MovePosition(transform.position + movement);
     }
-    private void FixedUpdate()
-    {
-
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if(collision.gameObject.tag == "Wall")
+    //    {
+    //        //rb.velocity = new Vector3(0, 0, 0);
+    //    }
+    //}
 
 }
