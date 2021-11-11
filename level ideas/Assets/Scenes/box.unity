@@ -359,7 +359,7 @@ MonoBehaviour:
   score: {fileID: 984658286}
   RMin: 0
   RMax: 5
-  ZInitSpeed: 3
+  ZInitSpeed: 10
   bounceVariance: 5
   ball: {fileID: 2102951405}
   spawn: {fileID: 969049085}
@@ -1044,7 +1044,7 @@ MonoBehaviour:
   player: 0
   GM: {fileID: 202321983}
   CC: {fileID: 1131129724}
-  maxUp: 3.5
+  maxUp: 4
   maxDown: -3.5
   maxLeft: 3.5
   maxRight: -3.5

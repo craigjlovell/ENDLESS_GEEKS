@@ -101,4 +101,10 @@ public class PaddleController : MonoBehaviour
         
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(Vector3.zero, Vector3.one);
+    }
+
 }
