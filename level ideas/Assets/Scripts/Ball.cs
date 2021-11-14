@@ -6,12 +6,18 @@ public class Ball : MonoBehaviour
 {
     public Rigidbody rb;
     [SerializeField] GameManager GM;
+    [SerializeField] Score score;
     private AudioSource hitSource;
 
     [SerializeField] int RMin;
     [SerializeField] int RMax;
     [SerializeField] float ZInitSpeed;
+    private float ZSpeed;
     [SerializeField] float bounceVariance;
+
+
+    [SerializeField] GameObject ball;
+    [SerializeField] GameObject spawn;
 
 
     [SerializeField]
@@ -25,14 +31,6 @@ public class Ball : MonoBehaviour
         hitSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         InitialVelocity();
-    }
-
-    void StartGame()
-    {
-        //if(Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    InitialVelocity();
-        //}
     }
 
     void Update()
@@ -83,15 +81,30 @@ public class Ball : MonoBehaviour
     //when the game starts a new round the function determines its movement (call when needed)
     public void InitialVelocity()
     {
+        StartCoroutine(RoundStart());
+    }
+
+    IEnumerator RoundStart()
+    {
+        ball.SetActive(false);
+        spawn.SetActive(true);
+        yield return new WaitForSeconds(GM.roundStartTime);
+        ball.SetActive(true);
+        spawn.SetActive(false);
+
+        if (score.Player1scored) ZSpeed = ZInitSpeed;
+        else ZSpeed = -ZInitSpeed;
+
         if (GM.is3d)
         {
-            rb.AddForce(new Vector3(Random.Range(RMin, RMax), Random.Range(RMin, RMax), ZInitSpeed * (Random.Range(0, 2) * 2 - 1)), ForceMode.Impulse);
+            rb.AddForce(new Vector3(Random.Range(RMin, RMax), Random.Range(RMin, RMax), ZSpeed), ForceMode.Impulse);
             rb.constraints = RigidbodyConstraints.None;
         }
         else
         {
-            rb.AddForce(new Vector3(0, Random.Range(RMin, RMax), ZInitSpeed * (Random.Range(0, 2) * 2 - 1)), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, Random.Range(RMin, RMax), ZSpeed), ForceMode.Impulse);
             rb.constraints = RigidbodyConstraints.FreezePositionX;
         }
     }
+
 }

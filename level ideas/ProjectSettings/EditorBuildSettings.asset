@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/box.unity
     guid: e8939234e6e6018409e09e43c5d95065
+  - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 147ea3ca3ab6c4e46a0dc13d08265f4f
+  - enabled: 1
+    path: Assets/Scenes/About.unity
+    guid: 0ea314c280f8dbd479d71d5924980a01
   m_configObjects: {}

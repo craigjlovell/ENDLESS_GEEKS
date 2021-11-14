@@ -112,7 +112,7 @@ public class CameraControl : MonoBehaviour
                 Debug.Log("zoom");
             }
         }
-        if (camPos < -1)
+        if (camPos <= -1)
         {
             game.isLeft = true;
         }

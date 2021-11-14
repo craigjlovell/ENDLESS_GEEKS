@@ -1,6 +1,6 @@
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public enum ePlayer
 {
@@ -10,52 +10,101 @@ public enum ePlayer
 
 public class PaddleController : MonoBehaviour
 {
+    [SerializeField] Rigidbody rb;
+
     public ePlayer player;
     public GameManager GM;
-    private Rigidbody rb;
-    private Vector3 _dir;
+    public CameraControl CC;    
+    private float inputX;
+    private float inputY;
+
+    public float maxUp;
+    public float maxDown;
+    public float maxLeft;
+    public float maxRight;
+
+    public float speed;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        float inputSpeedX = 0f;
-        float inputSpeedY = 0f;
-        if(player == ePlayer.PLAYER1)
+        if (player == ePlayer.PLAYER1)
         {
-            inputSpeedX = Input.GetAxisRaw("Horizontal");
-            inputSpeedY = Input.GetAxisRaw("Vertical");
+            inputX = Input.GetAxisRaw("Horizontal") * GM.PaddleXSpeed;
+            inputY = Input.GetAxisRaw("Vertical") * GM.PaddleYSpeed;
+
         }
-        else if(player == ePlayer.PLAYER2)
+        else if (player == ePlayer.PLAYER2)
         {
-            inputSpeedX = Input.GetAxisRaw("Horizontal2");
-            inputSpeedY = Input.GetAxisRaw("Vertical2");
+            inputX = Input.GetAxisRaw("Horizontal2") * GM.PaddleXSpeed;
+            inputY = Input.GetAxisRaw("Vertical2") * GM.PaddleYSpeed;
+
         }
+    }
+
+    private void FixedUpdate()
+    {
+
+        Vector3 movement = new Vector3(inputX * GM.PaddleXSpeed * Time.deltaTime, inputY * GM.PaddleYSpeed * Time.deltaTime, 0);
+        if(transform.position.y >= maxUp && movement.y > 0)
+        {
+            movement.y = 0;
+        }
+        else if (transform.position.y <= maxDown && movement.y < 0)
+        {
+            movement.y = 0;
+        }
+        else if (transform.position.x >= maxRight && movement.x > 0)
+        {
+            movement.x = 0;
+        }
+        else if (transform.position.x <= maxLeft && movement.x < 0)
+        {
+            movement.x = 0;
+        }
+
         if (GM.is3d)
         {
-            if (GM.isLeft)
+            if (CC.camPos == 0)
             {
-                transform.position += new Vector3(inputSpeedX * GM.PaddleXSpeed * Time.deltaTime, 0f, 0f);
+                if (player == ePlayer.PLAYER1)
+                {
+                    rb.MovePosition(-transform.position + movement);
+                }
+                else if (player == ePlayer.PLAYER2)
+                {
+                    rb.MovePosition(transform.position + movement);
+                }
             }
             else
             {
-                transform.position += new Vector3(inputSpeedX * -GM.PaddleXSpeed * Time.deltaTime, 0f, 0f);
+                if (GM.isLeft)
+                {
+                    rb.MovePosition(transform.position + movement);
+                }
+                else
+                {
+                    rb.MovePosition(-transform.position + movement);
+                }
             }
         }
-        transform.position += new Vector3(0f, inputSpeedY * GM.PaddleXSpeed * Time.deltaTime, 0f);
+        rb.MovePosition(transform.position + movement);
 
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, maxLeft, maxRight), Mathf.Clamp(transform.position.y, maxDown, maxUp), transform.position.z);
         
     }
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnDrawGizmos()
     {
-        if(collision.gameObject.tag == "Paddle" && collision.gameObject.tag == "Wall")
-        {
-            
-        }
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(Vector3.zero, Vector3.one);
     }
+
 }
