@@ -11,6 +11,18 @@ public class GameStateController : MonoBehaviour
     {
         SceneManager.LoadScene("box");
     }
+    public void Map1()
+    {
+        SceneManager.LoadScene("MountEruption");
+    }
+    public void Map2()
+    {
+        SceneManager.LoadScene("NeonCity");
+    }
+    public void Map3()
+    {
+        SceneManager.LoadScene("OceansDepth");
+    }
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");

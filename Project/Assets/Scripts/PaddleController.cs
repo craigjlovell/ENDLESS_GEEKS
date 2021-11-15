@@ -26,10 +26,7 @@ public class PaddleController : MonoBehaviour
 
     // Update is called once per frame
     private void Update()
-    {
-        speed = 10f;
-        //Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxisRaw("Vertical"),0); 
-        //Vector3 m_Input2 = new Vector3(Input.GetAxis("Horizontal2"), Input.GetAxisRaw("Vertical2"), 0);
+    {        
         if (player == ePlayer.PLAYER1)
         {
             inputX = Input.GetAxis("Horizontal")* GM.PaddleXSpeed;
@@ -43,21 +40,21 @@ public class PaddleController : MonoBehaviour
             
         }
 
-        //Vector3 tempVect = new Vector3(inputX, inputY, 0);
-        //tempVect = tempVect.normalized * speed * Time.deltaTime;
+        
+    }
 
+    private void FixedUpdate()
+    {
         if (GM.is3d)
         {
             if (CC.camPos == 0)
             {
                 if (player == ePlayer.PLAYER1)
                 {
-                    //rb.MovePosition(-transform.position + tempVect * speed);
                     rb.velocity = new Vector3(-inputX, rb.velocity.y, 0f);
                 }
                 else if (player == ePlayer.PLAYER2)
                 {
-                    //rb.MovePosition(transform.position + tempVect * speed);
                     rb.velocity = new Vector3(inputX, rb.velocity.y, 0f);
                 }
             }
@@ -65,18 +62,15 @@ public class PaddleController : MonoBehaviour
             {
                 if (GM.isLeft)
                 {
-                    //rb.MovePosition(transform.position + tempVect * speed);
-                    rb.velocity = new Vector3(inputX, rb.velocity.y, 0f);                    
+                    rb.velocity = new Vector3(inputX, rb.velocity.y, 0f);
                 }
                 else
                 {
-                    //rb.MovePosition(-transform.position + tempVect *  speed);
-                    rb.velocity = new Vector3(-inputX, rb.velocity.y, 0f);                    
+                    rb.velocity = new Vector3(-inputX, rb.velocity.y, 0f);
                 }
             }
         }
         rb.velocity = new Vector3(rb.velocity.x, inputY, 0f);
-        //rb.MovePosition(transform.position + tempVect * speed);
 
         if (player == ePlayer.PLAYER1)
         {
