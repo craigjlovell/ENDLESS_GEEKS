@@ -70,14 +70,12 @@ public class Ball : MonoBehaviour
     //perfectly reflects off any collider perfectly
     private void Bounce(Vector3 collisionNormal, Vector3 CollisionPoint, Vector3 CollisionTransform, string CollisionTag)
     {
-<<<<<<< HEAD
         Vector3 direction = lastFrameVelocity.normalized;
         float speed = lastFrameVelocity.magnitude;
 
         Vector3 NewDirection = 
         //Debug.Log("Out Direction: " + direction);
         rb.velocity = direction * minVelocity;
-=======
         var speed = lastFrameVelocity.magnitude;
         var direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
         Vector3 newDirection;
@@ -93,7 +91,6 @@ public class Ball : MonoBehaviour
             newDirection = direction;
         }
         rb.velocity = newDirection.normalized * minVelocity;
->>>>>>> d4d93cfa15b533cd886459ab5e10c86a3c0739ce
     }
 
 
