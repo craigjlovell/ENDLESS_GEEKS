@@ -125,6 +125,7 @@ Transform:
   - {fileID: 8325854936625003695}
   - {fileID: 4991627851359954900}
   - {fileID: 3665444273055420785}
+  - {fileID: 1612123687931191664}
   m_Father: {fileID: 6018306465630701983}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2078,7 +2079,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6005795968595514491}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2653754919015771869
 MeshFilter:
@@ -2561,12 +2562,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6261948774510204667}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6539925, y: 0.5715765, z: -4.28398}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.6539924, y: 0.5715765, z: -4.28398}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6005795968595514491}
-  m_RootOrder: 0
+  m_Father: {fileID: 4507382811160099417}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8816079588198994025
 MeshFilter:
@@ -2644,8 +2645,6 @@ Transform:
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 27278352071666487}
-  - {fileID: 1612123687931191664}
   - {fileID: 8862831102572412158}
   m_Father: {fileID: 8138594944466053698}
   m_RootOrder: 0
@@ -2923,12 +2922,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7826307505514303973}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.6820406, y: 0.5715765, z: -4.083642}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6005795968595514491}
-  m_RootOrder: 1
+  m_Father: {fileID: 4841680171930770370}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6089042858839399787
 MeshFilter:
@@ -3105,6 +3104,7 @@ Transform:
   - {fileID: 2520145134580686504}
   - {fileID: 2186717596028998840}
   - {fileID: 253033819262494831}
+  - {fileID: 27278352071666487}
   m_Father: {fileID: 6018306465630701983}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

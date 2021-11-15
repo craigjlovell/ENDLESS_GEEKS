@@ -12,7 +12,7 @@ public class CameraControl : MonoBehaviour
     [SerializeField] Score score;
     private bool hit = false;
 
-    [SerializeField] GameManager game;
+    [SerializeField] GameManager GM;
 
     [SerializeField] CinemachineVirtualCamera CMtwoD;
     [SerializeField] CinemachineVirtualCamera CMzero;
@@ -108,17 +108,17 @@ public class CameraControl : MonoBehaviour
             if (score.scorePlayer1 != 0 || score.scorePlayer2 != 0)
             {
                 hit = true;
-                game.is3d = true;
+                GM.is3d = true;
                 Debug.Log("zoom");
             }
         }
         if (camPos <= -1)
         {
-            game.isLeft = true;
+            GM.isLeft = true;
         }
         else if (camPos >= 1)
         {
-            game.isLeft = false;
+            GM.isLeft = false;
         }
     }
 }
