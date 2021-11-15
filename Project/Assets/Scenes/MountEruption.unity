@@ -550,8 +550,7 @@ VFXRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10403,6 +10402,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 397864770873158839, guid: 4aed58e12303a974480592f0f6e75751, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5480464472500408036, guid: cf2ab6004b9028e4eb1a5cf1e0d1b9e8, type: 3}
     - target: {fileID: 1837422824848622226, guid: 4aed58e12303a974480592f0f6e75751, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -10489,7 +10492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8926572416340359756, guid: 4aed58e12303a974480592f0f6e75751, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8926572416340359756, guid: 4aed58e12303a974480592f0f6e75751, type: 3}
       propertyPath: m_Materials.Array.data[0]
