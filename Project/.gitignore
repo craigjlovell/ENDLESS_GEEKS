@@ -10,8 +10,11 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 /[Uu]ser[Ss]ettings/
+<<<<<<< HEAD
 
  
+=======
+>>>>>>> 4612d2eda0e1c1c72c6e61e9c4cd470c168c4d9e
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
