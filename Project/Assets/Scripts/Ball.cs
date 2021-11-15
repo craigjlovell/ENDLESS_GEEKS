@@ -70,12 +70,30 @@ public class Ball : MonoBehaviour
     //perfectly reflects off any collider perfectly
     private void Bounce(Vector3 collisionNormal, Vector3 CollisionPoint, Vector3 CollisionTransform, string CollisionTag)
     {
+<<<<<<< HEAD
         Vector3 direction = lastFrameVelocity.normalized;
         float speed = lastFrameVelocity.magnitude;
 
         Vector3 NewDirection = 
         //Debug.Log("Out Direction: " + direction);
         rb.velocity = direction * minVelocity;
+=======
+        var speed = lastFrameVelocity.magnitude;
+        var direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
+        Vector3 newDirection;
+        
+        Debug.Log("Out Direction: " + direction);
+
+        if (CollisionTag == "Paddle")
+        {
+            newDirection = direction + (CollisionPoint - CollisionTransform);
+        }
+        else
+        {
+            newDirection = direction;
+        }
+        rb.velocity = newDirection.normalized * minVelocity;
+>>>>>>> d4d93cfa15b533cd886459ab5e10c86a3c0739ce
     }
 
 
@@ -93,8 +111,8 @@ public class Ball : MonoBehaviour
         ball.SetActive(true);
         spawn.SetActive(false);
 
-        if (score.Player1scored) ZSpeed = ZInitSpeed;
-        else ZSpeed = -ZInitSpeed;
+        if (score.Player1scored) ZSpeed = -ZInitSpeed;
+        else ZSpeed = ZInitSpeed;
 
         if (GM.is3d)
         {
