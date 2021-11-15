@@ -74,7 +74,7 @@ public class Ball : MonoBehaviour
         float speed = lastFrameVelocity.magnitude;
 
         Vector3 NewDirection = 
-        Debug.Log("Out Direction: " + direction);
+        //Debug.Log("Out Direction: " + direction);
         rb.velocity = direction * minVelocity;
     }
 
