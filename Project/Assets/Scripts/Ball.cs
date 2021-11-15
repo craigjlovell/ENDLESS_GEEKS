@@ -72,17 +72,19 @@ public class Ball : MonoBehaviour
     {
         var speed = lastFrameVelocity.magnitude;
         var direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
+        Vector3 newDirection;
         
         Debug.Log("Out Direction: " + direction);
 
         if (CollisionTag == "Paddle")
         {
-            rb.velocity = direction + (CollisionPoint - CollisionTransform) * Mathf.Max(speed, minVelocity);
+            newDirection = direction + (CollisionPoint - CollisionTransform);
         }
         else
         {
-            rb.velocity = direction * Mathf.Max(speed, minVelocity);
+            newDirection = direction;
         }
+        rb.velocity = newDirection.normalized * minVelocity;
     }
 
 
@@ -100,8 +102,8 @@ public class Ball : MonoBehaviour
         ball.SetActive(true);
         spawn.SetActive(false);
 
-        if (score.Player1scored) ZSpeed = ZInitSpeed;
-        else ZSpeed = -ZInitSpeed;
+        if (score.Player1scored) ZSpeed = -ZInitSpeed;
+        else ZSpeed = ZInitSpeed;
 
         if (GM.is3d)
         {
