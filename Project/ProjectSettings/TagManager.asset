@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wall
+  - Score2
+  - Score1
+  - Paddle
+  - Ball
+  - Target
   layers:
   - Default
   - TransparentFX
