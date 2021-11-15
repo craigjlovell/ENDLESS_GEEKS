@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 469586762}
-  m_IndirectSpecularColor: {r: 0.20158044, g: 0.20473614, b: 0.25399008, a: 1}
+  m_IndirectSpecularColor: {r: 0.2127972, g: 0.21598032, b: 0.26199713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8584,7 +8584,7 @@ MonoBehaviour:
   bounceVariance: 5
   ball: {fileID: 2034821491}
   spawn: {fileID: 748755533}
-  minVelocity: 10
+  minVelocity: 20
 --- !u!82 &2034821494
 AudioSource:
   m_ObjectHideFlags: 0
