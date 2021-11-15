@@ -20,5 +20,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/About.unity
     guid: 0ea314c280f8dbd479d71d5924980a01
+  - enabled: 1
+    path: Assets/Scenes/MountEruption.unity
+    guid: 91a9ca678dc96df4db42acd03dbc8dc5
+  - enabled: 1
+    path: Assets/Scenes/NeonCity.unity
+    guid: d0339bcd9569f7440a604c2783240d3f
+  - enabled: 1
+    path: Assets/Scenes/OceansDepth.unity
+    guid: 45088cc1b2728c040a913941c02111cb
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
