@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 469586762}
-  m_IndirectSpecularColor: {r: 0.2127972, g: 0.21598032, b: 0.26199713, a: 1}
+  m_IndirectSpecularColor: {r: 0.20158044, g: 0.20473614, b: 0.25399008, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -403,7 +403,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 62292064bd32f014b8b66309a0b25615, type: 2}
+  - {fileID: 2100000, guid: 98147894d5313f04b808739060321c82, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7336,7 +7336,7 @@ MonoBehaviour:
   smooth: 5
   target: {x: 0, y: 0, z: 0, w: 0}
   score: {fileID: 711455965}
-  game: {fileID: 1070641086}
+  GM: {fileID: 0}
   CMtwoD: {fileID: 1015370049}
   CMzero: {fileID: 1780372769}
   CMone: {fileID: 613955097}
