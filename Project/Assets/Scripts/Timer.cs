@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
     public float timeRemaining = 10;
     public bool timerIsRunning = false;
     public Text timeText;
+    private AudioSource hitSource;
 
     private void Start()
     {
