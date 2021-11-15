@@ -221,8 +221,8 @@ MonoBehaviour:
   PLAY: 1
   is3d: 0
   isLeft: 0
-  PaddleXSpeed: 3.5
-  PaddleYSpeed: 3.5
+  PaddleXSpeed: 4
+  PaddleYSpeed: 4
   acceleration: 1.07
   roundStartTime: 2
 --- !u!4 &202321984
@@ -969,7 +969,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458871432}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1357651, y: -2.2, z: 47.832085}
+  m_LocalPosition: {x: 3.5, y: -2.2, z: 47.832085}
   m_LocalScale: {x: 0.21, y: 1.57, z: 1}
   m_Children: []
   m_Father: {fileID: 207952767}
@@ -1044,10 +1044,10 @@ MonoBehaviour:
   player: 0
   GM: {fileID: 202321983}
   CC: {fileID: 1131129724}
-  maxUp: 4
-  maxDown: -4
-  maxLeft: -4
-  maxRight: 4
+  maxUp: 3.5
+  maxDown: -3.5
+  maxLeft: -3.5
+  maxRight: 3.5
   speed: 0
 --- !u!54 &492174603
 Rigidbody:
@@ -9275,10 +9275,10 @@ MonoBehaviour:
   player: 1
   GM: {fileID: 202321983}
   CC: {fileID: 1131129724}
-  maxUp: 4
-  maxDown: -4
-  maxLeft: -4
-  maxRight: 4
+  maxUp: 3.5
+  maxDown: -3.5
+  maxLeft: -3.5
+  maxRight: 3.5
   speed: 0
 --- !u!54 &1979152074
 Rigidbody:
