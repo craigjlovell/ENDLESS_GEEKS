@@ -137,11 +137,19 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+<<<<<<< HEAD
     - Color_4c29381b95f74260b616ef4e7a2b2e62: {r: 0.1981132, g: 0.00905598, b: 0, a: 0}
     - Color_78043b30e8ab4ed5b375b9427dd0cb4f: {r: 1.6318699, g: 0.009656035, b: 0, a: 1}
     - Color_8252d77553914d3f81dd64b651059e66: {r: 0.0036044868, g: 0.006510067, b: 0.028301895, a: 0}
     - Vector2_47b15d11429c410daf5fc3011e128bf6: {r: 0.01, g: 0, b: 0, a: 0}
     - Vector2_ee91190ca562406180c1144d6c9cc16f: {r: 0.001, g: 0, b: 0, a: 0}
+=======
+    - Color_4c29381b95f74260b616ef4e7a2b2e62: {r: 0.16967782, g: 0.21685444, b: 0.38679248, a: 0}
+    - Color_78043b30e8ab4ed5b375b9427dd0cb4f: {r: 0, g: 4.055858, b: 3.717474, a: 0}
+    - Color_8252d77553914d3f81dd64b651059e66: {r: 0.36320752, g: 1, b: 0.9753943, a: 0}
+    - Vector2_47b15d11429c410daf5fc3011e128bf6: {r: 0.1, g: 0, b: 0, a: 0}
+    - Vector2_ee91190ca562406180c1144d6c9cc16f: {r: 0.2, g: 0.2, b: 0, a: 0}
+>>>>>>> 4dea9860617f43dac5b074c643c241323c60af49
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
