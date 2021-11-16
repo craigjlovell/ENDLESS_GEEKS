@@ -455,7 +455,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a99deb0f4b6c30444a6a6869bc9e1047, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9afcc7cc154a9ae43ad877f6b81a64c2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2277,7 +2277,7 @@ MonoBehaviour:
   smooth: 5
   target: {x: 0, y: 0, z: 0, w: 0}
   score: {fileID: 1053361178}
-  game: {fileID: 1761611383}
+  GM: {fileID: 0}
   CMtwoD: {fileID: 676828315}
   CMzero: {fileID: 802190841}
   CMone: {fileID: 532990150}
