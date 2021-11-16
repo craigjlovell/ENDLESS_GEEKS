@@ -13,7 +13,8 @@ public class Ball : MonoBehaviour
     [SerializeField] int RMax;
     [SerializeField] float ZInitSpeed;
     private float ZSpeed;
-    [SerializeField] float bounceVariance;
+    float velocity;
+    [SerializeField] float velocityBoost = 2;
 
 
     [SerializeField] GameObject ball;
@@ -39,6 +40,7 @@ public class Ball : MonoBehaviour
         //{
         //    InitialVelocity();
         //}
+        velocity = minVelocity;
     }
 
     void Update()
@@ -70,7 +72,6 @@ public class Ball : MonoBehaviour
     //perfectly reflects off any collider perfectly
     private void Bounce(Vector3 collisionNormal, Vector3 CollisionPoint, Vector3 CollisionTransform, string CollisionTag)
     {
-        var speed = lastFrameVelocity.magnitude;
         var direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
         Vector3 newDirection;
         
@@ -79,12 +80,14 @@ public class Ball : MonoBehaviour
         if (CollisionTag == "Paddle")
         {
             newDirection = direction + (CollisionPoint - CollisionTransform);
+            velocity = minVelocity;
         }
         else
         {
             newDirection = direction;
+            velocity += velocityBoost;
         }
-        rb.velocity = newDirection.normalized * minVelocity;
+        rb.velocity = newDirection.normalized * velocity;
     }
 
 
