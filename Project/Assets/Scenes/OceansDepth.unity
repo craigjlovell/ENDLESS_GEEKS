@@ -25,8 +25,13 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
+<<<<<<< HEAD
   m_SubtractiveShadowColor: {r: 0.8113208, g: 0.3093533, b: 0.21813813, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 4ecf082361f638d49ac1bd0fdc87d9ea, type: 2}
+=======
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+>>>>>>> a6b240d0334a3cd5e577a3933413d7122fea75be
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,8 +42,13 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 0.8016
   m_CustomReflection: {fileID: 0}
+<<<<<<< HEAD
   m_Sun: {fileID: 1241476003}
   m_IndirectSpecularColor: {r: 0.42384225, g: 0.54975724, b: 0.51456946, a: 0.8016}
+=======
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.45047247, g: 0.5004724, b: 0.57516444, a: 1}
+>>>>>>> a6b240d0334a3cd5e577a3933413d7122fea75be
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,18 +133,23 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!108 &1241476003 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 8323073707967128082, guid: bcce8c2d25760cb4c993fe63eeb58bb9, type: 3}
   m_PrefabInstance: {fileID: 8323073708914198961}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8323073708914198961
+=======
+--- !u!1001 &1476645064
+>>>>>>> a6b240d0334a3cd5e577a3933413d7122fea75be
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 850088804424934291, guid: bcce8c2d25760cb4c993fe63eeb58bb9, type: 3}
       propertyPath: m_Name
       value: 123
@@ -201,3 +216,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcce8c2d25760cb4c993fe63eeb58bb9, type: 3}
+=======
+    - target: {fileID: 1401608678607427017, guid: 25f2c6a3f73862f45a4bde352c464a53, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401608678607427017, guid: 25f2c6a3f73862f45a4bde352c464a53, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -38.75422
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401608678607427017, guid: 25f2c6a3f73862f45a4bde352c464a53, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 24.200428
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401608678607427017, guid: 25f2c6a3f73862f45a4bde352c464a53, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.121681
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401608678607427017, guid: 25f2c6a3f73862f45a4bde352c464a53, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401608678607427017, guid: 25f2c6a3f73862f45a4bde352c464a53, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401608678607427017, guid: 25f2c6a3f73862f45a4bde352c464a53, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401608678607427017, guid: 25f2c6a3f73862f45a4bde352c464a53, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401608678607427017, guid: 25f2c6a3f73862f45a4bde352c464a53, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401608678607427017, guid: 25f2c6a3f73862f45a4bde352c464a53, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401608678607427017, guid: 25f2c6a3f73862f45a4bde352c464a53, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844150966166565670, guid: 25f2c6a3f73862f45a4bde352c464a53, type: 3}
+      propertyPath: m_Name
+      value: GameObject 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 25f2c6a3f73862f45a4bde352c464a53, type: 3}
+>>>>>>> a6b240d0334a3cd5e577a3933413d7122fea75be
