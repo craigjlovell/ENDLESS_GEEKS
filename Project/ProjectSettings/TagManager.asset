@@ -10,6 +10,8 @@ TagManager:
   - Paddle
   - Ball
   - Target
+  - Game
+  - Pause
   layers:
   - Default
   - TransparentFX

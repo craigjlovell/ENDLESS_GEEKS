@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameStateController : MonoBehaviour
 {
-    //public Canvas canvas = null;
+    public Canvas canvas = null;
 
     public void Game()
     {
@@ -49,20 +49,20 @@ public class GameStateController : MonoBehaviour
         Application.Quit();
     }
 
-    //public void GamePause()
-    //{
-    //    Time.timeScale = 0;
-    //    canvas = GetComponentInParent<Canvas>();
-    //    canvas.enabled = false;
-    //    canvas = GameObject.FindGameObjectWithTag("").GetComponent<Canvas>();
-    //    canvas.enabled = true;
-    //}
-    //public void GameResume()
-    //{
-    //    Time.timeScale = 1;
-    //    canvas = GetComponentInParent<Canvas>();
-    //    canvas.enabled = false;
-    //    canvas = GameObject.FindGameObjectWithTag("").GetComponent<Canvas>();
-    //    canvas.enabled = true;
-    //}
+    public void GamePause()
+    {
+        Time.timeScale = 0;
+        canvas = GetComponentInParent<Canvas>();
+        canvas.enabled = false;
+        canvas = GameObject.FindGameObjectWithTag("Pause").GetComponent<Canvas>();
+        canvas.enabled = true;
+    }
+    public void GameResume()
+    {
+        Time.timeScale = 1;
+        canvas = GetComponentInParent<Canvas>();
+        canvas.enabled = false;
+        canvas = GameObject.FindGameObjectWithTag("Game").GetComponent<Canvas>();
+        canvas.enabled = true;
+    }
 }
