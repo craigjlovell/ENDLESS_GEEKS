@@ -9,11 +9,15 @@ public class Timer : MonoBehaviour
     public bool timerIsRunning = false;
     public Text timeText;
     private AudioSource hitSource;
-
+    [SerializeField] Canvas UI;
+    [SerializeField] Canvas Victory_Screen;
+    [SerializeField] HighScoreSystem HSS;
     private void Start()
     {
         // Starts the timer automatically
         timerIsRunning = true;
+        Victory_Screen.enabled = false;
+        UI.enabled = true;
     }
 
     void Update()
@@ -30,6 +34,10 @@ public class Timer : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                HSS.HighScore();
+                Victory_Screen.enabled = true;
+                UI.enabled = false;
+                Time.timeScale = 0;
             }
         }
     }
