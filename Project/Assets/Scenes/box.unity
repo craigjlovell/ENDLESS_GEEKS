@@ -5870,7 +5870,7 @@ MonoBehaviour:
   smooth: 5
   target: {x: 0, y: 0, z: 0, w: 0}
   score: {fileID: 984658286}
-  game: {fileID: 202321983}
+  GM: {fileID: 202321983}
   CMtwoD: {fileID: 8566708551333182896}
   CMzero: {fileID: 8566708553300580251}
   CMone: {fileID: 8566708552235971853}
