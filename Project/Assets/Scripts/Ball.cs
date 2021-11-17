@@ -13,8 +13,8 @@ public class Ball : MonoBehaviour
     [SerializeField] int RMax;
     [SerializeField] float ZInitSpeed;
     private float ZSpeed;
-    public float velocity;
-    private float velocityBoost = 0.5f;
+    float velocity;
+    [SerializeField] float velocityBoost = 2;
 
 
     [SerializeField] GameObject ball;
@@ -22,7 +22,7 @@ public class Ball : MonoBehaviour
 
 
     [SerializeField]
-    private float minVelocity = 20f;
+    private float minVelocity = 10f;
 
     private Vector3 lastFrameVelocity;
 
@@ -32,11 +32,20 @@ public class Ball : MonoBehaviour
         hitSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         InitialVelocity();
+    }
+
+    void StartGame()
+    {
+        //if(Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    InitialVelocity();
+        //}
         velocity = minVelocity;
     }
 
     void Update()
     {
+        //StartGame();
         lastFrameVelocity = rb.velocity;
     }
 
@@ -52,24 +61,29 @@ public class Ball : MonoBehaviour
         }
 
         Bounce(collision.contacts[0].normal, collision.contacts[0].point, collision.transform.position, collision.gameObject.tag);
- 
+
+        foreach (ContactPoint contact in collision.contacts)
+        {
+            Debug.DrawRay(contact.point, contact.normal, Color.white);
+            Debug.Log(contact.point);
+        }
     }
 
     //perfectly reflects off any collider perfectly
     private void Bounce(Vector3 collisionNormal, Vector3 CollisionPoint, Vector3 CollisionTransform, string CollisionTag)
     {
-        Vector3 direction;
+        var direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
         Vector3 newDirection;
+        
+        Debug.Log("Out Direction: " + direction);
 
         if (CollisionTag == "Paddle")
         {
-            direction = Vector3.Reflect(lastFrameVelocity.normalized, Vector3.forward);
             newDirection = direction + (CollisionPoint - CollisionTransform);
             velocity = minVelocity;
         }
         else
         {
-            direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
             newDirection = direction;
             velocity += velocityBoost;
         }
@@ -90,7 +104,6 @@ public class Ball : MonoBehaviour
         yield return new WaitForSeconds(GM.roundStartTime);
         ball.SetActive(true);
         spawn.SetActive(false);
-        velocity = minVelocity;
 
         if (score.Player1scored) ZSpeed = -ZInitSpeed;
         else ZSpeed = ZInitSpeed;
