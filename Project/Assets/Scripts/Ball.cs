@@ -13,8 +13,8 @@ public class Ball : MonoBehaviour
     [SerializeField] int RMax;
     [SerializeField] float ZInitSpeed;
     private float ZSpeed;
-    float velocity;
-    [SerializeField] float velocityBoost = 0.5f;
+    public float velocity;
+    private float velocityBoost = 0.5f;
 
 
     [SerializeField] GameObject ball;
@@ -90,6 +90,7 @@ public class Ball : MonoBehaviour
         yield return new WaitForSeconds(GM.roundStartTime);
         ball.SetActive(true);
         spawn.SetActive(false);
+        velocity = minVelocity;
 
         if (score.Player1scored) ZSpeed = -ZInitSpeed;
         else ZSpeed = ZInitSpeed;
