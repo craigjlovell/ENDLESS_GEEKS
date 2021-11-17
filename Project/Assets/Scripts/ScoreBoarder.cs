@@ -7,7 +7,6 @@ public class ScoreBoarder : MonoBehaviour
     public ePlayer player;
 
     public Score score;
-    [SerializeField] HighScoreSystem HSS;
 
 
     private void OnCollisionEnter(Collision collision)
@@ -22,7 +21,6 @@ public class ScoreBoarder : MonoBehaviour
             {
                 score.scorePlayer1++;
                 score.Player1scored = true;
-                HSS.HighScore();
             }
             else if (player == ePlayer.PLAYER2)
             {
