@@ -12,6 +12,9 @@ TagManager:
   - Target
   - Game
   - Pause
+  - CinemachineTarget
+  - GameOver
+  - GameOver2
   layers:
   - Default
   - TransparentFX
