@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: 3d898f63b4819ad45bb14d8bb34ec7cd
+guid: 787545c829260b04f83d406c5952d57d
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert15
-    second: {fileID: 2100000, guid: 450b09b8d095a8e42b47b629bfab379b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_building_metal
-    second: {fileID: 2100000, guid: eec279419a79eff4691193afa955c76f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_building_window
-    second: {fileID: 2100000, guid: d3a524bd8e4cd6d49b0ca66ec195489c, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
