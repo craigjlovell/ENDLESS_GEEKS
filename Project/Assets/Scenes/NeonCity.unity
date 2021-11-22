@@ -799,7 +799,7 @@ PrefabInstance:
     - target: {fileID: 2586335636958368612, guid: 2164c461c7658ee48ac6c5b04d983765, type: 3}
       propertyPath: score2
       value: 
-      objectReference: {fileID: 972247801}
+      objectReference: {fileID: 0}
     - target: {fileID: 2586335636958368613, guid: 2164c461c7658ee48ac6c5b04d983765, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1069,7 +1069,7 @@ PrefabInstance:
     - target: {fileID: 5529733141343103752, guid: 2e2a9300fdc1db948b1767fd93bce357, type: 3}
       propertyPath: score2
       value: 
-      objectReference: {fileID: 972247801}
+      objectReference: {fileID: 0}
     - target: {fileID: 5529733141343103753, guid: 2e2a9300fdc1db948b1767fd93bce357, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1664,7 +1664,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 9a5ece466a7ee5b4291d3d3a9bda5a0b, type: 3}
 --- !u!114 &972247801 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4909345143902060806, guid: 9a5ece466a7ee5b4291d3d3a9bda5a0b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2439160666924153493, guid: 9a5ece466a7ee5b4291d3d3a9bda5a0b, type: 3}
   m_PrefabInstance: {fileID: 972247800}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -22715,6 +22715,7 @@ MonoBehaviour:
   target: {x: 0, y: 0, z: 0, w: 0}
   score: {fileID: 154371539729892287}
   GM: {fileID: 154371539106283755}
+  Pong2D: {fileID: 0}
   CMtwoD: {fileID: 154371537842679395}
   CMzero: {fileID: 154371538924988243}
   CMone: {fileID: 154371539431437708}
@@ -27122,8 +27123,6 @@ MonoBehaviour:
   PLAY: 1
   is3d: 0
   isLeft: 0
-  PaddleXSpeed: 20
-  PaddleYSpeed: 20
   acceleration: 1.07
   roundStartTime: 2
 --- !u!65 &154371539115015060
