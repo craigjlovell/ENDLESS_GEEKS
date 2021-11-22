@@ -11,9 +11,12 @@ public class PaddleController : MonoBehaviour
     public ePlayer player;
     public GameManager GM;
     public CameraControl CC;
-    [SerializeField] Rigidbody rb;
+    public Rigidbody rb;
     private float inputX;
     private float inputY;
+
+    public float PaddleXSpeed;
+    public float PaddleYSpeed;
 
     public float speed;
 
@@ -29,14 +32,14 @@ public class PaddleController : MonoBehaviour
     {        
         if (player == ePlayer.PLAYER1)
         {
-            inputX = Input.GetAxis("Horizontal")* GM.PaddleXSpeed;
-            inputY = Input.GetAxis("Vertical") * GM.PaddleYSpeed;
+            inputX = Input.GetAxis("Horizontal")* PaddleXSpeed;
+            inputY = Input.GetAxis("Vertical") * PaddleYSpeed;
             
         }
         else if (player == ePlayer.PLAYER2)
         {
-            inputX = Input.GetAxis("Horizontal2") * GM.PaddleXSpeed;
-            inputY = Input.GetAxis("Vertical2") * GM.PaddleYSpeed;
+            inputX = Input.GetAxis("Horizontal2") * PaddleXSpeed;
+            inputY = Input.GetAxis("Vertical2") * PaddleYSpeed;
             
         }
 
