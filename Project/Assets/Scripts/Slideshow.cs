@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class Slideshow : MonoBehaviour
 {
+<<<<<<< HEAD
     [SerializeField] int slide;
     [SerializeField] string objectName;
 
     [SerializeField] GameObject object1;
     [SerializeField] GameObject object2;
     [SerializeField] GameObject object3;
+=======
+    int slide;
+    public int numberOfSlides;
+    public string objectName;
+    
+    //public GameObject object4;
+    public GameObject object2;
+    public GameObject object3;
+    public GameObject object1;
+>>>>>>> 2ad0c1c3969b835bdfd2fd7ac793599772d8cba4
 
     private void Start()
     {
@@ -70,5 +81,16 @@ public class Slideshow : MonoBehaviour
         {
             object3.SetActive(false);
         }
+<<<<<<< HEAD
+=======
+        if (slide == 3)
+        {
+            //object4.SetActive(true);
+        }
+        else
+        {
+            //object4.SetActive(false);
+        }
+>>>>>>> 2ad0c1c3969b835bdfd2fd7ac793599772d8cba4
     }
 }
