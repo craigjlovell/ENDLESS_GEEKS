@@ -5,23 +5,26 @@ public class HighScoreSystem : MonoBehaviour
 {
     [SerializeField] Score score;
 
-    public Text highScore;
+    public Text highScore1;
+    public Text highScore2;
+    public Text highScore3;
+    public Text highScore4;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
-    }
+  
 
     // Update is called once per frame
     public void HighScore()
     {
-        if (score.scorePlayer1 > PlayerPrefs.GetInt("HighScore", 0))
+        if (score.scorePlayer1 > PlayerPrefs.GetInt("HighScore1", 0))
         {
-            PlayerPrefs.SetInt("HighScore", score.scorePlayer1);
-            highScore.text = score.scorePlayer1.ToString();
-
-
+            PlayerPrefs.SetInt("HighScore4", PlayerPrefs.GetInt("HighScore3", 0));
+            PlayerPrefs.SetInt("HighScore3", PlayerPrefs.GetInt("HighScore2", 0));
+            PlayerPrefs.SetInt("HighScore2", PlayerPrefs.GetInt("HighScore1", 0));
+            PlayerPrefs.SetInt("HighScore1", score.scorePlayer1);
         }
+        highScore1.text = PlayerPrefs.GetInt("HighScore1", 0).ToString();
+        highScore2.text = PlayerPrefs.GetInt("HighScore2", 0).ToString();
+        highScore3.text = PlayerPrefs.GetInt("HighScore3", 0).ToString();
+        highScore4.text = PlayerPrefs.GetInt("HighScore4", 0).ToString();
     }
 }
