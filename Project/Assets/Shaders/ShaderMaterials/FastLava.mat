@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BetterLava 1
+  m_Name: FastLava
   m_Shader: {fileID: -6465566751694194690, guid: 05d93e9cf78ac58449dfef46a30ed096, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -84,7 +84,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_08da2d098adb4b879db14c37f03fe36a: 0.85
+    - Vector1_08da2d098adb4b879db14c37f03fe36a: 1
     - Vector1_094de5ca367a49c7b835975bc59c8cab: 50
     - Vector1_431b8d7125ad4a84855f868b7059ceea: 0.54
     - Vector1_66d081eb0d554b14a60388b1cd45f55c: -0.02
