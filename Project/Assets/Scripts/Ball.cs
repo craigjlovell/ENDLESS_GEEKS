@@ -5,20 +5,20 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public Rigidbody rb;
-    [SerializeField] GameManager GM;
-    [SerializeField] Score score;
+    public GameManager gm;
+    public Score score;
     private AudioSource hitSource;
 
-    [SerializeField] int RMin;
-    [SerializeField] int RMax;
-    [SerializeField] float ZInitSpeed;
+    public int RMin = -1;
+    public int RMax = 5;
+    public float ZInitSpeed = 12.5f;
     private float ZSpeed;
-    public float velocity;
+    private float velocity;
     private float velocityBoost = 0.5f;
 
 
-    [SerializeField] GameObject ball;
-    [SerializeField] GameObject spawn;
+    public GameObject ball;
+    public GameObject spawn;
 
 
     [SerializeField]
@@ -48,7 +48,6 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.tag == "Paddle")
         {
             hitSource.Play();
-
         }
 
         Bounce(collision.contacts[0].normal, collision.contacts[0].point, collision.transform.position, collision.gameObject.tag);
@@ -76,7 +75,6 @@ public class Ball : MonoBehaviour
         rb.velocity = newDirection.normalized * velocity;
     }
 
-
     //when the game starts a new round the function determines its movement (call when needed)
     public void InitialVelocity()
     {
@@ -87,15 +85,15 @@ public class Ball : MonoBehaviour
     {
         ball.SetActive(false);
         spawn.SetActive(true);
-        yield return new WaitForSeconds(GM.roundStartTime);
+        yield return new WaitForSeconds(gm.roundStartTime);
         ball.SetActive(true);
         spawn.SetActive(false);
         velocity = minVelocity;
 
         if (score.Player1scored) ZSpeed = -ZInitSpeed;
-        else ZSpeed = ZInitSpeed;
+        //else ZSpeed = ZInitSpeed;
 
-        if (GM.is3d)
+        if (gm.is3d)
         {
             rb.AddForce(new Vector3(Random.Range(RMin, RMax), Random.Range(RMin, RMax), ZSpeed), ForceMode.Impulse);
             rb.constraints = RigidbodyConstraints.None;

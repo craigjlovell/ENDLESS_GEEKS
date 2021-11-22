@@ -8,7 +8,6 @@ public class Slideshow : MonoBehaviour
     public int numberOfSlides;
     public string objectName;
     
-    //public GameObject object4;
     public GameObject object2;
     public GameObject object3;
     public GameObject object1;
@@ -54,6 +53,7 @@ public class Slideshow : MonoBehaviour
         {
             object1.SetActive(false);
         }
+
         if (slide == 1)
         {
             object2.SetActive(true);
@@ -62,6 +62,7 @@ public class Slideshow : MonoBehaviour
         {
             object2.SetActive(false);
         }
+
         if (slide == 2)
         {
             object3.SetActive(true);
@@ -69,14 +70,6 @@ public class Slideshow : MonoBehaviour
         else
         {
             object3.SetActive(false);
-        }
-        if (slide == 3)
-        {
-            //object4.SetActive(true);
-        }
-        else
-        {
-            //object4.SetActive(false);
         }
     }
 }
