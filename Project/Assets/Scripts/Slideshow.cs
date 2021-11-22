@@ -28,6 +28,7 @@ public class Slideshow : MonoBehaviour
         {
             slide++;
         }
+        PlayerPrefs.SetInt(objectName, slide);
     }
 
     void Previous()
@@ -40,6 +41,7 @@ public class Slideshow : MonoBehaviour
         {
             slide++;
         }
+        PlayerPrefs.SetInt(objectName, slide);
     }
 
     private void Update()
@@ -76,6 +78,5 @@ public class Slideshow : MonoBehaviour
         {
             //object4.SetActive(false);
         }
-        PlayerPrefs.SetInt(objectName, slide);
     }
 }
