@@ -8,7 +8,14 @@ public class ScoreBoarder : MonoBehaviour
 
     public Score score;
     public HighScoreSystem HSS;
+    private AudioSource goalSoundSource;
 
+
+    private void Start()
+    {
+        goalSoundSource = GetComponent<AudioSource>();
+
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -21,12 +28,14 @@ public class ScoreBoarder : MonoBehaviour
             if (player == ePlayer.PLAYER1)
             {
                 score.scorePlayer1++;
+                goalSoundSource.Play();
                 score.Player1scored = true;
                 HSS.HighScore();
             }
             else if (player == ePlayer.PLAYER2)
             {
                 score.scorePlayer2++;
+                goalSoundSource.Play();
                 score.Player1scored = false;
             }
         }
