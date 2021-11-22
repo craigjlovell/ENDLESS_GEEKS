@@ -4,23 +4,21 @@ using UnityEngine;
 
 public class Slideshow : MonoBehaviour
 {
-    int slide;
-    [SerializeField] int numberOfSlides;
+    [SerializeField] int slide;
     [SerializeField] string objectName;
 
-    [SerializeField] GameObject object4;
+    [SerializeField] GameObject object1;
     [SerializeField] GameObject object2;
     [SerializeField] GameObject object3;
-    [SerializeField] GameObject object1;
 
     private void Start()
     {
         slide = PlayerPrefs.GetInt(objectName, 0);
     }
 
-    void Next()
+    public void Next()
     {
-        if (slide == numberOfSlides - 1)
+        if (slide == 2)
         {
             slide = 0;
         }
@@ -31,15 +29,15 @@ public class Slideshow : MonoBehaviour
         PlayerPrefs.SetInt(objectName, slide);
     }
 
-    void Previous()
+    public void Previous()
     {
         if (slide == 0)
         {
-            slide = numberOfSlides - 1;
+            slide = 2;
         }
         else
         {
-            slide++;
+            slide--;
         }
         PlayerPrefs.SetInt(objectName, slide);
     }
@@ -54,6 +52,7 @@ public class Slideshow : MonoBehaviour
         {
             object1.SetActive(false);
         }
+
         if (slide == 1)
         {
             object2.SetActive(true);
@@ -62,6 +61,7 @@ public class Slideshow : MonoBehaviour
         {
             object2.SetActive(false);
         }
+
         if (slide == 2)
         {
             object3.SetActive(true);
@@ -69,14 +69,6 @@ public class Slideshow : MonoBehaviour
         else
         {
             object3.SetActive(false);
-        }
-        if (slide == 3)
-        {
-            object4.SetActive(true);
-        }
-        else
-        {
-            object4.SetActive(false);
         }
     }
 }
