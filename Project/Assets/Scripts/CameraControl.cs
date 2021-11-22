@@ -13,6 +13,7 @@ public class CameraControl : MonoBehaviour
     private bool hit = false;
 
     [SerializeField] GameManager GM;
+    [SerializeField] Canvas Pong2D;
 
     [SerializeField] CinemachineVirtualCamera CMtwoD;
     [SerializeField] CinemachineVirtualCamera CMzero;
@@ -110,6 +111,7 @@ public class CameraControl : MonoBehaviour
                 hit = true;
                 GM.is3d = true;
                 Debug.Log("zoom");
+                Pong2D.enabled = false;
             }
         }
         if (camPos <= -1)
