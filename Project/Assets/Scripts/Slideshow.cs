@@ -5,13 +5,13 @@ using UnityEngine;
 public class Slideshow : MonoBehaviour
 {
     int slide;
-    [SerializeField] int numberOfSlides;
-    [SerializeField] string objectName;
-
-    [SerializeField] GameObject object4;
-    [SerializeField] GameObject object2;
-    [SerializeField] GameObject object3;
-    [SerializeField] GameObject object1;
+    public int numberOfSlides;
+    public string objectName;
+    
+    //public GameObject object4;
+    public GameObject object2;
+    public GameObject object3;
+    public GameObject object1;
 
     private void Start()
     {
@@ -70,11 +70,11 @@ public class Slideshow : MonoBehaviour
         }
         if (slide == 3)
         {
-            object4.SetActive(true);
+            //object4.SetActive(true);
         }
         else
         {
-            object4.SetActive(false);
+            //object4.SetActive(false);
         }
         PlayerPrefs.SetInt(objectName, slide);
     }
