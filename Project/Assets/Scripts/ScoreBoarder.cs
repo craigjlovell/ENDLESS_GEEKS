@@ -7,7 +7,7 @@ public class ScoreBoarder : MonoBehaviour
     public ePlayer player;
 
     public Score score;
-    [SerializeField] HighScoreSystem HSS;
+    public HighScoreSystem HSS;
 
 
     private void OnCollisionEnter(Collision collision)
