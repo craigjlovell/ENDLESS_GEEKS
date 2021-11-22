@@ -22,6 +22,9 @@ public class NameInput : MonoBehaviour
     int ActiveNumber;
     bool PlayerReady;
 
+    public string player1;
+    public Text player2;
+
     List<string> Letters = new List<string>
     {
         "A" , "B" , "C" , "D" , "E" , "F" , "G" , "H" , "I" , "J" , "K" , "L" , "M" , "N" , "O" , "P" , "Q" , "R" , "S" , "T" , "U" , "V" , "W" , "X" , "Y" , "Z"
@@ -116,8 +119,19 @@ public class NameInput : MonoBehaviour
 
         }
 
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            player1 = "";
+            CreateName();
+        }
+        
+        
+    }
 
-
-
+    void CreateName()
+    {
+        player1 += FirstLetter.text;
+        player1 += SecondLetter.text;
+        player1 += ThirdLetter.text;
     }
 }

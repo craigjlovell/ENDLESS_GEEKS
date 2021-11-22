@@ -6,6 +6,7 @@ using TMPro;
 
 public class Score : MonoBehaviour
 {
+    public NameInput name;
     Canvas canvas = null;
     public int scorePlayer1;
     public int scorePlayer2;
@@ -20,6 +21,7 @@ public class Score : MonoBehaviour
 
     private void Update()
     {
+        
         score1.text = scorePlayer1.ToString();
         score2.text = scorePlayer2.ToString();
 
