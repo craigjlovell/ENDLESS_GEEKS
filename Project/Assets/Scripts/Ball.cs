@@ -19,6 +19,7 @@ public class Ball : MonoBehaviour
 
     public GameObject ball;
     public GameObject spawn;
+    public GameObject spark;
 
 
     
@@ -66,6 +67,7 @@ public class Ball : MonoBehaviour
             direction = Vector3.Reflect(lastFrameVelocity.normalized, Vector3.forward);
             newDirection = direction + (CollisionPoint - CollisionTransform);
             velocity = minVelocity;
+            Object.Instantiate(spark, ball.transform);
         }
         else
         {

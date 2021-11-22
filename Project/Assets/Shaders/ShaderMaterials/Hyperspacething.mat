@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5007386809901369293
+--- !u!114 &-1581149804657623641
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Water
-  m_Shader: {fileID: -6465566751694194690, guid: a073170d3f4b69b4195ecc1144ddc6f4, type: 3}
+  m_Name: Hyperspacething
+  m_Shader: {fileID: -6465566751694194690, guid: 6781738fa8395e542b3c40a11ccac09a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -32,6 +32,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_63c33d038a5a4feea746b463a1a78bdf:
+        m_Texture: {fileID: 2800000, guid: d6b9c18ef030b4042aabb64f06d21d1d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -89,14 +93,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_0a3c7c8f6759429ebfe100931f5a5532: 10
-    - Vector1_5679ca5099594d0eb82aec5e56d94bfe: 1.32
-    - Vector1_66518baefca844b98645f50be0245802: 1.9
-    - Vector1_909a0a493993435085ea0f95bdfead99: 5
-    - Vector1_c935f2440fbb46b984c4d11bf6c2e1f1: 1
-    - Vector1_cb95d65c618646eb9e620153770f6daa: 1
-    - Vector1_e534f0c627884239bfcf2178e4edb09b: 0.05
-    - Vector1_f6219e0b025f4e2382bacfe1047fa7da: 100
+    - Vector1_a82917e56ee04c01a6c580a50fb0a861: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -124,9 +121,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_67cd19aa0b4d4b58b4ab936691481476: {r: 0.2028302, g: 1, b: 0.6798774, a: 0.20392157}
-    - Color_7527b9755f2b41838ea42223eb5abc62: {r: 0.15792987, g: 0.3679245, b: 0.22887403, a: 0.21960784}
-    - Color_f8311206f54747cf95f543b3eb70e1dd: {r: 1, g: 1, b: 1, a: 0.59607846}
+    - Color_4ea60ace99ac4efca3625aa7a5254ba9: {r: 1, g: 1, b: 1, a: 0}
+    - Vector2_9889c9d765d64088be3a443a4f073a49: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

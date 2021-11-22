@@ -64,5 +64,6 @@ public class HighScoreSystem : MonoBehaviour
         Scorename2.text = PlayerPrefs.GetString("HS2Name", "n/a").ToString();
         Scorename3.text = PlayerPrefs.GetString("HS3Name", "n/a").ToString();
         Scorename4.text = PlayerPrefs.GetString("HS4Name", "n/a").ToString();
+        PlayerPrefs.Save();
     }
 }
