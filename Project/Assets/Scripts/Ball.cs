@@ -18,7 +18,7 @@ public class Ball : MonoBehaviour
 
 
     public GameObject ball;
-    public GameObject spawn;
+    public GameObject spawn; 
 
 
     [SerializeField]
