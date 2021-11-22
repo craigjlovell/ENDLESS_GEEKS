@@ -5,22 +5,23 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public Rigidbody rb;
-    [SerializeField] GameManager GM;
-    [SerializeField] Score score;
+    public GameManager GM;
+    public Score score;
     private AudioSource hitSource;
 
     private int RMin = -1;
     private int RMax = 5;
-    private float ZInitSpeed = 12.5f;
+    private float ZInitSpeed= 12.5f;
     private float ZSpeed;
     public float velocity;
     private float velocityBoost = 0.5f;
+
 
     public GameObject ball;
     public GameObject spawn;
 
 
-    [SerializeField]
+    
     private float minVelocity = 20f;
 
     private Vector3 lastFrameVelocity;

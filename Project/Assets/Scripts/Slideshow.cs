@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Slideshow : MonoBehaviour
 {
-    [SerializeField] int slide;
-    [SerializeField] string objectName;
+    private int slide;
+    public string objectName;
 
-    [SerializeField] GameObject object1;
-    [SerializeField] GameObject object2;
-    [SerializeField] GameObject object3;
+    public GameObject object1;
+    public GameObject object2;
+    public GameObject object3;
 
     private void Start()
     {
