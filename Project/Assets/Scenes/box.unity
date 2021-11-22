@@ -202,8 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499a5e47c3a0ec647abf02127517ddf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1: {fileID: 0}
-  Player2: {fileID: 0}
+  Player1: {fileID: 586401654}
+  Player2: {fileID: 2056711380}
   Ball: {fileID: 992171565860497332}
   PongPlayer1: {fileID: 1575452757}
   PongPlayer2: {fileID: 1512296797}
@@ -939,7 +939,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6247907408947279833, guid: d327e45cfd6b3ef4da4b7ea528c166a7, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6247907408947279833, guid: d327e45cfd6b3ef4da4b7ea528c166a7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -985,6 +985,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 9177878429994746356, guid: d327e45cfd6b3ef4da4b7ea528c166a7, type: 3}
+      propertyPath: CC
+      value: 
+      objectReference: {fileID: 1131129724}
+    - target: {fileID: 9177878429994746356, guid: d327e45cfd6b3ef4da4b7ea528c166a7, type: 3}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 202321983}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d327e45cfd6b3ef4da4b7ea528c166a7, type: 3}
 --- !u!4 &586401654 stripped

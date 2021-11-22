@@ -110,8 +110,9 @@ Transform:
   m_Children:
   - {fileID: 1605998273919993736}
   - {fileID: 1580521447756462755}
+  - {fileID: 1285000438444626196}
   m_Father: {fileID: 6247907408947279833}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4500102768470437678
 GameObject:
@@ -336,8 +337,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7925730042207826316}
-  m_RootOrder: 0
+  m_Father: {fileID: 7548832231517202030}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2137839353102151471
 MeshFilter:
@@ -501,7 +502,6 @@ Transform:
   m_Children:
   - {fileID: 7612982385971128717}
   - {fileID: 1165545609022808762}
-  - {fileID: 7925730042207826316}
   - {fileID: 7548832231517202030}
   - {fileID: 6498103681862931107}
   m_Father: {fileID: 0}
@@ -552,12 +552,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77a5d0505216d1c43aaa5c2e5bf9305c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfSlides: 4
+  slide: 0
   objectName: Paddle1
-  object4: {fileID: 8763535259312296737}
+  object1: {fileID: 8134208293727242543}
   object2: {fileID: 4500102768470437678}
   object3: {fileID: 3225141167577890031}
-  object1: {fileID: 8134208293727242543}
 --- !u!1 &7038030355232390238
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,7 +763,7 @@ Transform:
   - {fileID: 7598254672923428001}
   - {fileID: 843043675045396623}
   m_Father: {fileID: 6247907408947279833}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8369963220648474257
 GameObject:
@@ -847,34 +846,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &8763535259312296737
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7925730042207826316}
-  m_Layer: 6
-  m_Name: Triangle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7925730042207826316
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8763535259312296737}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1285000438444626196}
-  m_Father: {fileID: 6247907408947279833}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
