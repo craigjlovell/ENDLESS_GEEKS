@@ -1656,7 +1656,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6247907408947279833, guid: d327e45cfd6b3ef4da4b7ea528c166a7, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6247907408947279833, guid: d327e45cfd6b3ef4da4b7ea528c166a7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7470,7 +7470,6 @@ MonoBehaviour:
   target: {x: 0, y: 0, z: 0, w: 0}
   score: {fileID: 711455965}
   GM: {fileID: 1070641086}
-  Pong2D: {fileID: 0}
   CMtwoD: {fileID: 1015370049}
   CMzero: {fileID: 1780372769}
   CMone: {fileID: 613955097}
@@ -8164,6 +8163,8 @@ MonoBehaviour:
   PLAY: 1
   is3d: 0
   isLeft: 0
+  PaddleXSpeed: 20
+  PaddleYSpeed: 20
   acceleration: 1.07
   roundStartTime: 2
 --- !u!4 &1070641087
@@ -8713,7 +8714,7 @@ PrefabInstance:
       objectReference: {fileID: 13400000, guid: 66fdc30e5eea71340b4e59338861bb14, type: 2}
     - target: {fileID: 7562750789821072558, guid: fd2f09c2e12179d48abc7791308e8fa4, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8237825504654773138, guid: fd2f09c2e12179d48abc7791308e8fa4, type: 3}
       propertyPath: m_RootOrder
@@ -9147,8 +9148,8 @@ Transform:
   m_Children:
   - {fileID: 748755536}
   - {fileID: 2034821490}
-  - {fileID: 663148991}
   - {fileID: 1481737625}
+  - {fileID: 663148991}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10405,6 +10406,7 @@ MonoBehaviour:
   RMin: -1
   RMax: 5
   ZInitSpeed: 12.5
+  velocity: 0
   ball: {fileID: 2034821491}
   spawn: {fileID: 748755533}
   minVelocity: 20

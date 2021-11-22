@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class Slideshow : MonoBehaviour
 {
-    int slide;
-    public int numberOfSlides;
-    public string objectName;
-    
-    public GameObject object2;
-    public GameObject object3;
-    public GameObject object1;
+    [SerializeField] int slide;
+    [SerializeField] string objectName;
+
+    [SerializeField] GameObject object1;
+    [SerializeField] GameObject object2;
+    [SerializeField] GameObject object3;
 
     private void Start()
     {
         slide = PlayerPrefs.GetInt(objectName, 0);
     }
 
-    void Next()
+    public void Next()
     {
-        if (slide == numberOfSlides - 1)
+        if (slide == 2)
         {
             slide = 0;
         }
@@ -30,15 +29,15 @@ public class Slideshow : MonoBehaviour
         PlayerPrefs.SetInt(objectName, slide);
     }
 
-    void Previous()
+    public void Previous()
     {
         if (slide == 0)
         {
-            slide = numberOfSlides - 1;
+            slide = 2;
         }
         else
         {
-            slide++;
+            slide--;
         }
         PlayerPrefs.SetInt(objectName, slide);
     }

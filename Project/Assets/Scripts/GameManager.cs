@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour
     public bool is3d = false;
     public bool isLeft;
 
+    //paddle vars
+    public float PaddleXSpeed;
+    public float PaddleYSpeed;
+
     //ball vars
     public float acceleration;
     public float roundStartTime;
