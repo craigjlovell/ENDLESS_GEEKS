@@ -797,13 +797,9 @@ MonoBehaviour:
   rb: {fileID: 179585353}
   GM: {fileID: 1761611383}
   score: {fileID: 1053361178}
-  RMin: -1
-  RMax: 5
-  ZInitSpeed: 12.5
   velocity: 0
   ball: {fileID: 179585348}
   spawn: {fileID: 1620532627}
-  minVelocity: 10
 --- !u!82 &179585351
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2632,6 +2628,7 @@ MonoBehaviour:
   target: {x: 0, y: 0, z: 0, w: 0}
   score: {fileID: 1053361178}
   GM: {fileID: 1761611383}
+  Pong2D: {fileID: 0}
   CMtwoD: {fileID: 676828315}
   CMzero: {fileID: 802190841}
   CMone: {fileID: 532990150}
@@ -8997,8 +8994,6 @@ MonoBehaviour:
   PLAY: 1
   is3d: 0
   isLeft: 0
-  PaddleXSpeed: 20
-  PaddleYSpeed: 20
   acceleration: 1.07
   roundStartTime: 2
 --- !u!4 &1761611384
