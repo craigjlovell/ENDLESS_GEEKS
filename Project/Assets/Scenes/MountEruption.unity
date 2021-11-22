@@ -230,7 +230,7 @@ Transform:
   m_LocalScale: {x: 0.09503425, y: 0.09503425, z: 0.09503425}
   m_Children: []
   m_Father: {fileID: 543450652543774339}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &78311984
 GameObject:
@@ -1940,6 +1940,7 @@ MonoBehaviour:
   Player1scored: 0
   score1: {fileID: 636366917}
   score2: {fileID: 250547930}
+  inGameMode: 1
 --- !u!4 &711455966
 Transform:
   m_ObjectHideFlags: 0
@@ -8164,8 +8165,6 @@ MonoBehaviour:
   PLAY: 1
   is3d: 0
   isLeft: 0
-  PaddleXSpeed: 20
-  PaddleYSpeed: 20
   acceleration: 1.07
   roundStartTime: 2
 --- !u!4 &1070641087
@@ -9849,7 +9848,7 @@ Transform:
   m_LocalScale: {x: 0.008430071, y: 0.008430071, z: 0.008430071}
   m_Children: []
   m_Father: {fileID: 543450652543774339}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1930513704
 GameObject:
@@ -10647,7 +10646,7 @@ Transform:
   - {fileID: 249299253}
   - {fileID: 2128333045}
   m_Father: {fileID: 543450652543774339}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &260722974745121120
 GameObject:
@@ -10833,9 +10832,9 @@ Transform:
   - {fileID: 249998965}
   - {fileID: 249951627}
   - {fileID: 469586763}
-  - {fileID: 2424302}
   - {fileID: 1869461222}
   - {fileID: 2141096638}
+  - {fileID: 2424302}
   - {fileID: 1950801245}
   - {fileID: 1538441271}
   - {fileID: 691512368}
@@ -11331,7 +11330,7 @@ PrefabInstance:
     - target: {fileID: 2586335636958368612, guid: 2164c461c7658ee48ac6c5b04d983765, type: 3}
       propertyPath: score2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 250547930}
     - target: {fileID: 2586335636958368613, guid: 2164c461c7658ee48ac6c5b04d983765, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -12266,7 +12265,7 @@ PrefabInstance:
     - target: {fileID: 5529733141343103752, guid: 2e2a9300fdc1db948b1767fd93bce357, type: 3}
       propertyPath: score2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 250547930}
     - target: {fileID: 5529733141343103753, guid: 2e2a9300fdc1db948b1767fd93bce357, type: 3}
       propertyPath: m_Pivot.x
       value: 0
