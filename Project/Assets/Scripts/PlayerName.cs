@@ -7,6 +7,7 @@ public class PlayerName : MonoBehaviour
 {
     public string nameOfPlayer;
     public string saveName;
+    public string Player;
 
     public Text inputText;
     public Text loadedName;
@@ -22,14 +23,14 @@ public class PlayerName : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        nameOfPlayer = PlayerPrefs.GetString("name", "none");
+        nameOfPlayer = PlayerPrefs.GetString(Player, "none");
         loadedName.text = nameOfPlayer;
     }
 
     public void SetName()
     {
         saveName = inputText.text;
-        PlayerPrefs.SetString("name", saveName);
+        PlayerPrefs.SetString(Player, saveName);
     }
 
 
