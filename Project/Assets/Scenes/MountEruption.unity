@@ -464,6 +464,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.y
       value: -0.7071068
       objectReference: {fileID: 0}
+    - target: {fileID: 8493417211303687862, guid: 20029cd0df002794193e2edf25700fcb, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b0bb17b8480d02f4aab590bd24c488de, type: 3}
     - target: {fileID: 8493417211883038163, guid: 20029cd0df002794193e2edf25700fcb, type: 3}
       propertyPath: PongBall
       value: 
