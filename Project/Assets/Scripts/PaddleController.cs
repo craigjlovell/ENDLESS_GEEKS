@@ -15,8 +15,8 @@ public class PaddleController : MonoBehaviour
     private float inputX;
     private float inputY;
 
-    public float PaddleXSpeed;
-    public float PaddleYSpeed;
+    public float PaddleXSpeed = 20f;
+    public float PaddleYSpeed = 20f;
 
     public float speed;
 
