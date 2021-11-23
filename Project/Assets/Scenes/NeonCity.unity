@@ -782,6 +782,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 101198101593127529, guid: 20029cd0df002794193e2edf25700fcb, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1199991819081077659, guid: 20029cd0df002794193e2edf25700fcb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -902,6 +906,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8493417211303687862, guid: 20029cd0df002794193e2edf25700fcb, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b315ee4789f5cdc4fbdfa40c26f2c0c6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20029cd0df002794193e2edf25700fcb, type: 3}
 --- !u!1 &658244364
