@@ -252,8 +252,6 @@ MonoBehaviour:
   PLAY: 1
   is3d: 0
   isLeft: 0
-  PaddleXSpeed: 4
-  PaddleYSpeed: 4
   acceleration: 1.07
   roundStartTime: 2
 --- !u!4 &202321984
@@ -354,13 +352,10 @@ MonoBehaviour:
   rb: {fileID: 293253900}
   GM: {fileID: 202321983}
   score: {fileID: 984658286}
-  RMin: -1
-  RMax: 5
-  ZInitSpeed: 12.5
-  velocityBoost: 2
+  spark: {fileID: 0}
+  velocity: 0
   ball: {fileID: 2102951405}
   spawn: {fileID: 969049085}
-  minVelocity: 20
 --- !u!96 &293253902
 TrailRenderer:
   serializedVersion: 2
@@ -5892,6 +5887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af8fda7196f1f1489b6da0a8d8ade33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: {fileID: 0}
   scorePlayer1: 0
   scorePlayer2: 0
   scoreCam: 0
@@ -5899,6 +5895,7 @@ MonoBehaviour:
   Player1scored: 0
   score1: {fileID: 1192241302}
   score2: {fileID: 1478281799}
+  inGameMode: 1
 --- !u!4 &984658287
 Transform:
   m_ObjectHideFlags: 0
@@ -6092,6 +6089,7 @@ MonoBehaviour:
   target: {x: 0, y: 0, z: 0, w: 0}
   score: {fileID: 984658286}
   GM: {fileID: 202321983}
+  Pong2D: {fileID: 0}
   CMtwoD: {fileID: 8566708551333182896}
   CMzero: {fileID: 8566708553300580251}
   CMone: {fileID: 8566708552235971853}
@@ -7453,6 +7451,8 @@ MonoBehaviour:
   player: 0
   GM: {fileID: 202321983}
   CC: {fileID: 1131129724}
+  PaddleXSpeed: 0
+  PaddleYSpeed: 0
   maxUp: 4
   maxDown: -4
   maxLeft: -4
@@ -7568,14 +7568,26 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5385294334078985971, guid: cb011658bd6c55a46aa282f4f205c80f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5385294334078985972, guid: cb011658bd6c55a46aa282f4f205c80f, type: 3}
       propertyPath: score
       value: 
       objectReference: {fileID: 984658286}
+    - target: {fileID: 5385294334470311544, guid: cb011658bd6c55a46aa282f4f205c80f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.296
+      objectReference: {fileID: 0}
     - target: {fileID: 5385294334470311545, guid: cb011658bd6c55a46aa282f4f205c80f, type: 3}
       propertyPath: score
       value: 
       objectReference: {fileID: 984658286}
+    - target: {fileID: 5385294335126960557, guid: cb011658bd6c55a46aa282f4f205c80f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8071942877002795736, guid: cb011658bd6c55a46aa282f4f205c80f, type: 3}
       propertyPath: score
       value: 
@@ -7828,6 +7840,8 @@ MonoBehaviour:
   player: 1
   GM: {fileID: 202321983}
   CC: {fileID: 1131129724}
+  PaddleXSpeed: 0
+  PaddleYSpeed: 0
   maxUp: 4
   maxDown: -4
   maxLeft: -4
