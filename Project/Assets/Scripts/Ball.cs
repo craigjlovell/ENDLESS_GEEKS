@@ -9,16 +9,20 @@ public class Ball : MonoBehaviour
     public Score score;
     private AudioSource hitSource;
 
+    public ParticleSystem spark;
+
     private int RMin = -1;
     private int RMax = 5;
     private float ZInitSpeed= 12.5f;
     private float ZSpeed;
     public float velocity;
     private float velocityBoost = 0.5f;
+    private int amount = 0;
 
 
     public GameObject ball;
     public GameObject spawn;
+    //public GameObject spark;
 
 
     
@@ -33,6 +37,7 @@ public class Ball : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         InitialVelocity();
         velocity = minVelocity;
+        spark.Stop();
     }
 
     void Update()
@@ -48,9 +53,8 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.tag == "Paddle")
         {
             hitSource.Play();
-
+            spark.Play();
         }
-
         Bounce(collision.contacts[0].normal, collision.contacts[0].point, collision.transform.position, collision.gameObject.tag);
  
     }
@@ -66,6 +70,7 @@ public class Ball : MonoBehaviour
             direction = Vector3.Reflect(lastFrameVelocity.normalized, Vector3.forward);
             newDirection = direction + (CollisionPoint - CollisionTransform);
             velocity = minVelocity;
+            
         }
         else
         {
