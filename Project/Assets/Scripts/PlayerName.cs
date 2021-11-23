@@ -12,14 +12,6 @@ public class PlayerName : MonoBehaviour
     public Text inputText;
     public Text loadedName;
 
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -32,8 +24,4 @@ public class PlayerName : MonoBehaviour
         saveName = inputText.text;
         PlayerPrefs.SetString(Player, saveName);
     }
-
-
-
-
 }

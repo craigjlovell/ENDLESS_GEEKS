@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class HighScoreSystem : MonoBehaviour
 {
     [SerializeField] Score score;
-    public NameInput name;
 
     public Text highScore1;
     public Text highScore2;

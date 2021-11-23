@@ -6,10 +6,9 @@ using TMPro;
 
 public class Score : MonoBehaviour
 {
-    public NameInput name;
     Canvas canvas = null;
-    public int scorePlayer1;
-    public int scorePlayer2;
+    public int scorePlayer1 = 0;
+    public int scorePlayer2 = 0;
     public int scoreCam;
     public int scoreDiv = 1;
 
@@ -21,7 +20,6 @@ public class Score : MonoBehaviour
 
     private void Update()
     {
-        
         score1.text = scorePlayer1.ToString();
         score2.text = scorePlayer2.ToString();
 
@@ -47,7 +45,5 @@ public class Score : MonoBehaviour
                 canvas.enabled = true;
             }
         }
-
     }
-
 }

@@ -7,7 +7,6 @@ public class ScoreBoarder : MonoBehaviour
     public ePlayer player;
 
     public Score score;
-    public HighScoreSystem HSS;
     private AudioSource goalSoundSource;
 
 
@@ -30,7 +29,6 @@ public class ScoreBoarder : MonoBehaviour
                 score.scorePlayer1++;
                 goalSoundSource.Play();
                 score.Player1scored = true;
-                HSS.HighScore();
             }
             else if (player == ePlayer.PLAYER2)
             {
