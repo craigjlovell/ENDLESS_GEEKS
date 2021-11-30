@@ -7878,6 +7878,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1200381383933873955, guid: c664436cf48679644b6fdf96285b977a, type: 3}
+      propertyPath: m_Name
+      value: Player1
+      objectReference: {fileID: 0}
     - target: {fileID: 2131414425374093619, guid: c664436cf48679644b6fdf96285b977a, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -45545,7 +45549,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7e3475d36495ab4f847f719cbdd4337, type: 2}
+  - {fileID: 2100000, guid: 88f2d4b346e11cb4496ad7f38f8109e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
