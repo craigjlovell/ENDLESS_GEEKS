@@ -62108,7 +62108,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: af785b12671e9f648ad5effa767f740f, type: 2}
+  sharedProfile: {fileID: 11400000, guid: a1a64ae13c9042a4bb38e2d799c7d134, type: 2}
 --- !u!23 &7060670364267406081
 MeshRenderer:
   m_ObjectHideFlags: 0
