@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Hyperspacething
+  m_Name: Hyperspacething 1
   m_Shader: {fileID: -6465566751694194690, guid: 6781738fa8395e542b3c40a11ccac09a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -121,7 +121,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_4ea60ace99ac4efca3625aa7a5254ba9: {r: 0.6088266, g: 0, b: 0.93333334, a: 0}
+    - Color_4ea60ace99ac4efca3625aa7a5254ba9: {r: 0, g: 0.8684218, b: 0.9339623, a: 0}
     - Vector2_9889c9d765d64088be3a443a4f073a49: {r: 0.1, g: 0.2, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
