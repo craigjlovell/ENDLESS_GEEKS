@@ -32,7 +32,7 @@ public class CameraControl : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("OGMode", 0) == 0) { OGOn = true; ; OGPermanent = false; }
         if (PlayerPrefs.GetInt("OGMode", 0) == 1) { OGOn = false; OGPermanent = false; }
-        if (PlayerPrefs.GetInt("OGMode", 0) == 0) { OGOn = true; OGPermanent = true; }
+        if (PlayerPrefs.GetInt("OGMode", 0) == 2) { OGOn = true; OGPermanent = true; }
 
         CMtwoD.Priority = 1;
         CMnFour.Priority = 0;
