@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Apartment_Yellow
-  m_Shader: {fileID: -6465566751694194690, guid: 0056b856a10b7e846be99ce4f34702d7, type: 3}
+  m_Name: WaterSprite 1
+  m_Shader: {fileID: -6465566751694194690, guid: 3b275151a56e99f41877b119dd00e0ec, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_1a526d587c724887bd6c499726000a93:
+        m_Texture: {fileID: 2800000, guid: d6b9c18ef030b4042aabb64f06d21d1d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -76,6 +80,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_0a3c7c8f6759429ebfe100931f5a5532: 10
+    - Vector1_5679ca5099594d0eb82aec5e56d94bfe: 0
+    - Vector1_66518baefca844b98645f50be0245802: 1
+    - Vector1_82b4cf48a37143eeb477ba50494ba3a0: 10
+    - Vector1_909a0a493993435085ea0f95bdfead99: 1
+    - Vector1_c935f2440fbb46b984c4d11bf6c2e1f1: 1
+    - Vector1_cb95d65c618646eb9e620153770f6daa: 1
+    - Vector1_e534f0c627884239bfcf2178e4edb09b: 0.5
+    - Vector1_f6219e0b025f4e2382bacfe1047fa7da: 100
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -103,13 +116,15 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_2689265713174366a94afc9871d97043: {r: 10.680627, g: 6.2425323, b: 0, a: 0}
+    - Color_67cd19aa0b4d4b58b4ab936691481476: {r: 0, g: 0.8823528, b: 1, a: 1}
+    - Color_7527b9755f2b41838ea42223eb5abc62: {r: 0, g: 0.13953495, b: 1, a: 0}
+    - Color_f8311206f54747cf95f543b3eb70e1dd: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &825502139963884615
+--- !u!114 &8627118603600492189
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

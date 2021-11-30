@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shadow
-  m_Shader: {fileID: -6465566751694194690, guid: 0c59cb050f837604cbfc4ed0fec62b0e, type: 3}
+  m_Name: Apartment_Yellow
+  m_Shader: {fileID: -6465566751694194690, guid: 0056b856a10b7e846be99ce4f34702d7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3005
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -76,7 +76,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_41c5bca7be27460cad46c2ee0743a214: 0.919
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -104,13 +103,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_9c6d14659e084f2895c07872178e82c8: {r: 0.019312924, g: 0.06788754, b: 0.13207549, a: 1}
+    - Color_2689265713174366a94afc9871d97043: {r: 11.984314, g: 7.027451, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &3768708407847657903
+--- !u!114 &825502139963884615
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
