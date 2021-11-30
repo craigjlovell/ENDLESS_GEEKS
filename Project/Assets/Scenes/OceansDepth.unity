@@ -11312,7 +11312,7 @@ Animator:
   m_GameObject: {fileID: 919132147640606420}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 36078ab0369161e49a29d349ae3e0739, type: 3}
-  m_Controller: {fileID: 9100000, guid: 4c3190a137eeb5e43991e833a59d0f4b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 08dd520e5a7abe746836ff57e5f276e9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -23779,6 +23779,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5572723507346151960, guid: c664436cf48679644b6fdf96285b977a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 10c1feda35eabe948a582b18e790ff06, type: 3}
     - target: {fileID: 7846837415328706709, guid: c664436cf48679644b6fdf96285b977a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -42707,7 +42711,7 @@ Animator:
   m_GameObject: {fileID: 2000792263}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 36078ab0369161e49a29d349ae3e0739, type: 3}
-  m_Controller: {fileID: 9100000, guid: 5242cd5aa1c0e25458abd145f0bf61dc, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
