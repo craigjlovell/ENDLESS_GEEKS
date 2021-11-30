@@ -122,7 +122,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_2689265713174366a94afc9871d97043: {r: 8, g: 0, b: 0, a: 0}
-    - Vector2_7fdda2ee68cb48ce9d16f55f76992b0e: {r: 0, g: 0.015, b: 0, a: 0}
+    - Vector2_7fdda2ee68cb48ce9d16f55f76992b0e: {r: 0, g: 0.1, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
