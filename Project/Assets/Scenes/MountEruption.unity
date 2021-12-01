@@ -142,6 +142,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2131414426671236135, guid: c664436cf48679644b6fdf96285b977a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131414426709234991, guid: c664436cf48679644b6fdf96285b977a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 2775684023911750299, guid: c664436cf48679644b6fdf96285b977a, type: 3}
       propertyPath: m_Name
       value: WoldMusts
