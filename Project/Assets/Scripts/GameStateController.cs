@@ -47,7 +47,12 @@ public class GameStateController : MonoBehaviour
     {
         SceneManager.LoadScene("2_GameModeTest");
     }
-    
+
+    public void Settings()
+    {
+        SceneManager.LoadScene("Settings");
+    }
+
 
     public void Exit()
     {

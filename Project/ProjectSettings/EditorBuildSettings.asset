@@ -32,5 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2_GameModeTest.unity
     guid: 634fb7c6578ef5d46aa2030dadda0cfc
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: b23dc217b83556f4d85acc5a09134866
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}

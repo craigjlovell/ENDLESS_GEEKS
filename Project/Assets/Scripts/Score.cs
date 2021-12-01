@@ -16,7 +16,7 @@ public class Score : MonoBehaviour
 
     public TextMeshProUGUI score1;
     public TextMeshProUGUI score2;
-    public bool inGameMode = true;
+    public bool inGameMode = false;
 
     private void Update()
     {
@@ -24,26 +24,24 @@ public class Score : MonoBehaviour
         score2.text = scorePlayer2.ToString();
 
         scoreCam = (scorePlayer2 - scorePlayer1) / scoreDiv;
-        if (inGameMode == false)
+        if (scorePlayer1 == 20)
         {
-            if (scorePlayer1 == 20)
-            {
-                Time.timeScale = 0;
-                canvas = null;
-                canvas = GameObject.FindGameObjectWithTag("Game").GetComponent<Canvas>();
-                canvas.enabled = false;
-                canvas = GameObject.FindGameObjectWithTag("GameOver").GetComponent<Canvas>();
-                canvas.enabled = true;
-            }
-            else if (scorePlayer2 == 20)
-            {
-                Time.timeScale = 0;
-                canvas = null;
-                canvas = GameObject.FindGameObjectWithTag("Game").GetComponent<Canvas>();
-                canvas.enabled = false;
-                canvas = GameObject.FindGameObjectWithTag("GameOver2").GetComponent<Canvas>();
-                canvas.enabled = true;
-            }
+            Time.timeScale = 0;
+            canvas = null;
+            canvas = GameObject.FindGameObjectWithTag("Game").GetComponent<Canvas>();
+            canvas.enabled = false;
+            canvas = GameObject.FindGameObjectWithTag("GameOver").GetComponent<Canvas>();
+            canvas.enabled = true;
         }
+        else if (scorePlayer2 == 20)
+        {
+            Time.timeScale = 0;
+            canvas = null;
+            canvas = GameObject.FindGameObjectWithTag("Game").GetComponent<Canvas>();
+            canvas.enabled = false;
+            canvas = GameObject.FindGameObjectWithTag("GameOver2").GetComponent<Canvas>();
+            canvas.enabled = true;
+        }
+        
     }
 }
