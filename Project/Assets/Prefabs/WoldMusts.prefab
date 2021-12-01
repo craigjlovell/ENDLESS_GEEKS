@@ -4649,7 +4649,7 @@ GameObject:
   - component: {fileID: 3712736738848782375}
   - component: {fileID: 2339901223512006886}
   - component: {fileID: 3466151878207353718}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CloseWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -5056,7 +5056,7 @@ GameObject:
   - component: {fileID: 7419998254156087345}
   - component: {fileID: 2502734681743487461}
   - component: {fileID: 4126982086062853094}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FarWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -5461,7 +5461,7 @@ GameObject:
   - component: {fileID: 5209267618561453267}
   - component: {fileID: 9215722570685604726}
   - component: {fileID: 6341109576621037500}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CubeBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11542,7 +11542,7 @@ GameObject:
   - component: {fileID: 8456170740544891270}
   - component: {fileID: 6376990768200840299}
   - component: {fileID: 6280353378996449891}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -13624,7 +13624,7 @@ GameObject:
   - component: {fileID: 5570136366256790108}
   - component: {fileID: 651284160119653224}
   - component: {fileID: 8022906465135393190}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Roof
   m_TagString: Wall
   m_Icon: {fileID: 0}
