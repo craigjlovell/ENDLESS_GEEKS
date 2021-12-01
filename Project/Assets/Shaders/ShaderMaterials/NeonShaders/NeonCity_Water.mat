@@ -122,7 +122,7 @@ Material:
     m_Colors:
     - Color_67cd19aa0b4d4b58b4ab936691481476: {r: 0, g: 0.13333334, b: 1, a: 1}
     - Color_7527b9755f2b41838ea42223eb5abc62: {r: 0.104396574, g: 0.23991896, b: 0.4339623, a: 0}
-    - Color_f8311206f54747cf95f543b3eb70e1dd: {r: 1, g: 1, b: 1, a: 1}
+    - Color_f8311206f54747cf95f543b3eb70e1dd: {r: 1, g: 1, b: 1, a: 0.45490196}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

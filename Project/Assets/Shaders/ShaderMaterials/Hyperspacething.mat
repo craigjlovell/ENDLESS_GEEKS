@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Hyperspacething
-  m_Shader: {fileID: -6465566751694194690, guid: 6781738fa8395e542b3c40a11ccac09a, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 25ac380024570d24d96648e6ad86c4fd, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -33,7 +33,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_63c33d038a5a4feea746b463a1a78bdf:
-        m_Texture: {fileID: 2800000, guid: d6b9c18ef030b4042aabb64f06d21d1d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7f0acdaf5f48d7d4aac31d19be542862, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -94,6 +94,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_a82917e56ee04c01a6c580a50fb0a861: 3
+    - Vector1_aee4f07c5cc542e388d1637812c87b4f: 5
+    - Vector1_df1a7d2412034928bf945af09b5e7ff3: 100
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -121,8 +123,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_4ea60ace99ac4efca3625aa7a5254ba9: {r: 0.6088266, g: 0, b: 0.93333334, a: 0}
-    - Vector2_9889c9d765d64088be3a443a4f073a49: {r: 0.1, g: 0.2, b: 0, a: 0}
+    - Color_4ea60ace99ac4efca3625aa7a5254ba9: {r: 0.012291439, g: 1.6625506, b: 0, a: 0}
+    - Vector2_9889c9d765d64088be3a443a4f073a49: {r: 0, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
