@@ -3197,7 +3197,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1699523154}
         m_TargetAssemblyTypeName: GameStateController, Assembly-CSharp
-        m_MethodName: About
+        m_MethodName: Settings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
