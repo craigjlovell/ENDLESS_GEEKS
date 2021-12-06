@@ -15,14 +15,12 @@ public class Ball : MonoBehaviour
     private int RMax = 5;
     private float ZInitSpeed= 12.5f;
     private float ZSpeed;
-    public float velocity;
     private float velocityBoost = 0.5f;
     private int amount = 0;
 
 
     public GameObject ball;
     public GameObject spawn;
-    //public GameObject spark;
 
 
     
@@ -36,7 +34,7 @@ public class Ball : MonoBehaviour
         hitSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         InitialVelocity();
-        velocity = minVelocity;
+        GM.velocity = minVelocity;
         spark.Stop();
     }
 
@@ -69,16 +67,16 @@ public class Ball : MonoBehaviour
         {
             direction = Vector3.Reflect(lastFrameVelocity.normalized, Vector3.forward);
             newDirection = direction + (CollisionPoint - CollisionTransform);
-            velocity = minVelocity;
+            GM.velocity = minVelocity;
             
         }
         else
         {
             direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
             newDirection = direction;
-            velocity += velocityBoost;
+            GM.velocity += velocityBoost;
         }
-        rb.velocity = newDirection.normalized * velocity;
+        rb.velocity = newDirection.normalized * GM.velocity;
     }
 
 
@@ -95,7 +93,7 @@ public class Ball : MonoBehaviour
         yield return new WaitForSeconds(GM.roundStartTime);
         ball.SetActive(true);
         spawn.SetActive(false);
-        velocity = minVelocity;
+        GM.velocity = minVelocity;
 
         if (score.Player1scored) ZSpeed = -ZInitSpeed;
         else ZSpeed = ZInitSpeed;

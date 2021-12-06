@@ -15,12 +15,6 @@ public class PaddleController : MonoBehaviour
     private float inputX;
     private float inputY;
 
-    public float PaddleXSpeed = 20f;
-    public float PaddleYSpeed = 20f;
-
-    public float speed;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -32,14 +26,14 @@ public class PaddleController : MonoBehaviour
     {        
         if (player == ePlayer.PLAYER1)
         {
-            inputX = Input.GetAxis("Horizontal")* PaddleXSpeed;
-            inputY = Input.GetAxis("Vertical") * PaddleYSpeed;
+            inputX = Input.GetAxis("Horizontal")* GM.PaddleXSpeed;
+            inputY = Input.GetAxis("Vertical") * GM.PaddleYSpeed;
             
         }
         else if (player == ePlayer.PLAYER2)
         {
-            inputX = Input.GetAxis("Horizontal2") * PaddleXSpeed;
-            inputY = Input.GetAxis("Vertical2") * PaddleYSpeed;
+            inputX = Input.GetAxis("Horizontal2") * GM.PaddleXSpeed;
+            inputY = Input.GetAxis("Vertical2") * GM.PaddleYSpeed;
             
         }
 

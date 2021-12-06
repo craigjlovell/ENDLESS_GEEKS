@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20618188, g: 0.41839388, b: 0.41135767, a: 1}
+  m_IndirectSpecularColor: {r: 0.20618182, g: 0.41839382, b: 0.4113576, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12442,6 +12442,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266990430}
   m_Mesh: {fileID: -2344486762950347481, guid: 0d1ab30905c843243a20be7f785c8138, type: 3}
+--- !u!223 &270018757 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 9057422406528028593, guid: c664436cf48679644b6fdf96285b977a, type: 3}
+  m_PrefabInstance: {fileID: 1011134210}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &291121997
 GameObject:
   m_ObjectHideFlags: 0
@@ -25107,9 +25112,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3377813729042825831, guid: c664436cf48679644b6fdf96285b977a, type: 3}
+      propertyPath: Pong2D
+      value: 
+      objectReference: {fileID: 270018757}
     - target: {fileID: 4174661302603552455, guid: c664436cf48679644b6fdf96285b977a, type: 3}
       propertyPath: m_StopNaN
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554347409338066681, guid: c664436cf48679644b6fdf96285b977a, type: 3}
+      propertyPath: velocity
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5572723507346151960, guid: c664436cf48679644b6fdf96285b977a, type: 3}
       propertyPath: m_audioClip
